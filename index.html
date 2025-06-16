@@ -3,24 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Portfolio de [Tu Nombre]</title>
+    <style>
+        /* Estilos mínimos para visualización (luego lo moveremos a CSS) */
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+        header { background: #2c3e50; color: white; text-align: center; padding: 2rem 0; }
+        section { padding: 2rem; max-width: 800px; margin: 0 auto; }
+        .proyecto, .skill-box { background: #f9f9f9; padding: 1rem; margin: 1rem 0; border-left: 4px solid #2c3e50; }
+        footer { background: #2c3e50; color: white; text-align: center; padding: 1rem; }
+        a { color: #3498db; text-decoration: none; }
+        .back-btn { display: block; margin: 1rem 0; }
+    </style>
 </head>
 <body>
+    <!-- Cabecera con tu nombre en grande -->
     <header>
-        <h1>Tu Nombre</h1>
-        <p>Desarrollador Web | Diseñador</p>
+        <h1>[TU NOMBRE]</h1>
+        <p>Tu profesión o eslogan</p>
     </header>
-    <section id="proyectos">
-        <h2>Mis Proyectos</h2>
-        <div class="proyecto">
-            <h3>Proyecto Ejemplo</h3>
-            <p>Descripción breve del proyecto.</p>
-            <a href="#">Ver en GitHub</a>
+
+    <!-- Sección "Sobre mí" -->
+    <section id="sobre-mi">
+        <h2>Sobre mí</h2>
+        <p>¡Hola! Soy [Tu nombre]. [Breve descripción de tu background, pasiones y objetivos].</p>
+    </section>
+
+    <!-- Sección "Skills" -->
+    <section id="skills">
+        <h2>Mis Habilidades</h2>
+        <div class="skill-box">
+            <h3>Habilidades técnicas</h3>
+            <ul>
+                <li>HTML/CSS</li>
+                <li>JavaScript</li>
+                <li>[Otras...]</li>
+            </ul>
+        </div>
+        <div class="skill-box">
+            <h3>Habilidades blandas</h3>
+            <ul>
+                <li>Trabajo en equipo</li>
+                <li>Comunicación</li>
+            </ul>
         </div>
     </section>
+
+    <!-- Sección "Tools" -->
+    <section id="tools">
+        <h2>Herramientas que domino</h2>
+        <div class="skill-box">
+            <ul>
+                <li>Visual Studio Code</li>
+                <li>Git/GitHub</li>
+                <li>[Otras herramientas...]</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Sección de Proyectos (con enlaces a detalles) -->
+    <section id="proyectos">
+        <h2>Mis Proyectos</h2>
+        
+        <!-- Proyecto 1 - Con enlace a su sección detallada -->
+        <div class="proyecto">
+            <h3><a href="#proyecto-1">Proyecto 1</a></h3>
+            <p>Descripción breve del proyecto.</p>
+        </div>
+
+        <!-- Proyecto 2 -->
+        <div class="proyecto">
+            <h3><a href="#proyecto-2">Proyecto 2</a></h3>
+            <p>Descripción breve del proyecto.</p>
+        </div>
+    </section>
+
+    <!-- Detalles de cada proyecto (ocultos inicialmente) -->
+    <section id="proyecto-1" style="display: none;">
+        <a href="#proyectos" class="back-btn">← Volver a proyectos</a>
+        <h2>Proyecto 1</h2>
+        <p>Descripción detallada del proyecto...</p>
+        <h3>Tecnologías usadas:</h3>
+        <ul>
+            <li>HTML/CSS</li>
+            <li>JavaScript</li>
+        </ul>
+        <a href="#">Enlace al proyecto vivo</a>
+    </section>
+
+    <section id="proyecto-2" style="display: none;">
+        <a href="#proyectos" class="back-btn">← Volver a proyectos</a>
+        <h2>Proyecto 2</h2>
+        <p>Descripción detallada del proyecto...</p>
+        <h3>Tecnologías usadas:</h3>
+        <ul>
+            <li>React</li>
+            <li>Node.js</li>
+        </ul>
+        <a href="#">Enlace al proyecto vivo</a>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <ul>
+            <li>Email: <a href="mailto:tucorreo@ejemplo.com">tucorreo@ejemplo.com</a></li>
+            <li>GitHub: <a href="https://github.com/tuusuario" target="_blank">@tuusuario</a></li>
+            <li>LinkedIn: <a href="#" target="_blank">Tu perfil</a></li>
+        </ul>
+    </section>
+
+    <!-- Pie de página -->
     <footer>
-        <p>© 2024 - Mi Portfolio</p>
+        <p>&copy; 2024 - Portfolio de [Tu Nombre]</p>
     </footer>
+
+    <!-- JavaScript para mostrar/ocultar detalles de proyectos -->
+    <script>
+        document.querySelectorAll('.proyecto a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                // Oculta todos los detalles de proyectos
+                document.querySelectorAll('section[id^="proyecto-"]').forEach(sec => {
+                    sec.style.display = 'none';
+                });
+                // Muestra solo el proyecto seleccionado
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).style.display = 'block';
+                // Desplaza la vista al proyecto
+                document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
 </body>
 </html>
