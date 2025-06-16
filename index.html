@@ -4,133 +4,260 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio de [Tu Nombre]</title>
-    <style>
-        /* Estilos mínimos para visualización (luego lo moveremos a CSS) */
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
-        header { background: #2c3e50; color: white; text-align: center; padding: 2rem 0; }
-        section { padding: 2rem; max-width: 800px; margin: 0 auto; }
-        .proyecto, .skill-box { background: #f9f9f9; padding: 1rem; margin: 1rem 0; border-left: 4px solid #2c3e50; }
-        footer { background: #2c3e50; color: white; text-align: center; padding: 1rem; }
-        a { color: #3498db; text-decoration: none; }
-        .back-btn { display: block; margin: 1rem 0; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Cabecera con tu nombre en grande -->
+    <!-- Barra de navegación -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#tools">Herramientas</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Cabecera -->
     <header>
         <h1>[TU NOMBRE]</h1>
         <p>Tu profesión o eslogan</p>
     </header>
+    <!-- Contenido principal -->
+    <main id="contenido-principal">
+        <!-- Sección de Proyectos -->
+        <section id="proyectos">
+            <h2>Mis Proyectos</h2>
+            
+            <div class="proyecto" data-proyecto="1">
+                <h3>Landing Page para Restaurante</h3>
+                <p>Sitio responsive con reservas online.</p>
+                <a href="#" class="ver-proyecto">Ver detalles</a>
+            </div>
+            
+            <div class="proyecto" data-proyecto="2">
+                <h3>Aplicación de Tareas</h3>
+                <p>Gestor de tareas con React y Firebase.</p>
+                <a href="#" class="ver-proyecto">Ver detalles</a>
+            </div>
+        </section>
 
-    <!-- Sección "Sobre mí" -->
-    <section id="sobre-mi">
-        <h2>Sobre mí</h2>
-        <p>¡Hola! Soy [Tu nombre]. [Breve descripción de tu background, pasiones y objetivos].</p>
-    </section>
+        <!-- Sección de Habilidades -->
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+            <div class="habilidades-container">
+                <!-- Columna de Hard Skills -->
+                <div class="habilidades-columna">
+                    <h3>Habilidades Técnicas</h3>
+                    <ul>
+                        <li>HTML5, CSS3, JavaScript (ES6+)</li>
+                        <li>React, Node.js, Express</li>
+                        <li>Python, Django</li>
+                        <li>Bases de datos SQL y NoSQL</li>
+                        <li>Diseño responsive</li>
+                        <li>Git y control de versiones</li>
+                    </ul>
+                </div>
+                
+                <!-- Columna de Soft Skills -->
+                <div class="habilidades-columna">
+                    <h3>Habilidades Blandas</h3>
+                    <ul>
+                        <li>Trabajo en equipo</li>
+                        <li>Comunicación efectiva</li>
+                        <li>Resolución de problemas</li>
+                        <li>Gestión del tiempo</li>
+                        <li>Adaptabilidad</li>
+                        <li>Pensamiento crítico</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <!-- Sección "Skills" -->
-    <section id="skills">
-        <h2>Mis Habilidades</h2>
-        <div class="skill-box">
-            <h3>Habilidades técnicas</h3>
-            <ul>
-                <li>HTML/CSS</li>
-                <li>JavaScript</li>
-                <li>[Otras...]</li>
-            </ul>
+        <!-- Sección de Herramientas -->
+        <section id="tools">
+            <h2>Herramientas</h2>
+            <div class="herramientas-container">
+                <div class="herramienta-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                    <p>Git</p>
+                </div>
+                <div class="herramienta-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+                    <p>GitHub</p>
+                </div>
+                <div class="herramienta-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code">
+                    <p>VS Code</p>
+                </div>
+                <div class="herramienta-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
+                    <p>Figma</p>
+                </div>
+                <div class="herramienta-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman">
+                    <p>Postman</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Sobre mí -->
+        <section id="sobre-mi">
+            <h2>Sobre mí</h2>
+            <div class="sobre-mi-contenido">
+                <div class="sobre-mi-texto">
+                    <p>¡Hola! Soy [Nombre], apasionado por crear soluciones digitales...</p>
+                    <!-- Añade más texto sobre ti aquí -->
+                </div>
+                <div class="cv-descarga">
+                    <h3>Mi Curriculum</h3>
+                    <img src="https://cdn-icons-png.flaticon.com/512/3132/3132693.png" alt="Icono de CV" class="cv-icon">
+                    <a href="ruta/a/tu-cv.pdf" download class="boton-cv">Descargar CV</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Detalles de proyectos (pantalla completa) -->
+    <div id="proyecto-1" class="proyecto-detalle">
+        <a href="#" class="cerrar-proyecto">← Volver</a>
+        <div class="proyecto-detalle-container">
+            <div class="proyecto-header">
+                <h2>Landing Page para Restaurante</h2>
+            </div>
+            
+            <div class="proyecto-info">
+                <div class="info-section">
+                    <h3>About del proyecto</h3>
+                    <p>Desarrollo de una landing page completamente responsive para un restaurante local, incluyendo sistema de reservas online, galería de imágenes y menú interactivo.</p>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Roles desempeñados</h3>
+                    <ul>
+                        <li>Diseñador UX/UI</li>
+                        <li>Desarrollador Frontend</li>
+                        <li>Responsable de despliegue</li>
+                    </ul>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Tiempo de desarrollo</h3>
+                    <p>3 semanas (Diseño: 1 semana | Desarrollo: 2 semanas)</p>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Links útiles</h3>
+                    <div class="proyecto-links">
+                        <a href="#" target="_blank">Ver proyecto en vivo</a>
+                        <a href="#" target="_blank">Código en GitHub</a>
+                        <a href="#" target="_blank">Documentación</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="proyecto-media">
+                <img src="https://via.placeholder.com/800x500" alt="Captura del proyecto 1">
+                <img src="https://via.placeholder.com/800x500" alt="Captura del proyecto 2">
+            </div>
         </div>
-        <div class="skill-box">
-            <h3>Habilidades blandas</h3>
-            <ul>
-                <li>Trabajo en equipo</li>
-                <li>Comunicación</li>
-            </ul>
+    </div>
+
+    <div id="proyecto-2" class="proyecto-detalle">
+        <a href="#" class="cerrar-proyecto">← Volver</a>
+        <div class="proyecto-detalle-container">
+            <div class="proyecto-header">
+                <h2>Aplicación de Tareas</h2>
+            </div>
+            
+            <div class="proyecto-info">
+                <div class="info-section">
+                    <h3>About del proyecto</h3>
+                    <p>Aplicación de gestión de tareas con autenticación de usuarios y sincronización en tiempo real usando Firebase.</p>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Roles desempeñados</h3>
+                    <ul>
+                        <li>Desarrollador Full Stack</li>
+                        <li>Diseñador de interfaz</li>
+                    </ul>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Tiempo de desarrollo</h3>
+                    <p>4 semanas (Planificación: 1 semana | Desarrollo: 3 semanas)</p>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Links útiles</h3>
+                    <div class="proyecto-links">
+                        <a href="#" target="_blank">Demo en Vercel</a>
+                        <a href="#" target="_blank">Repositorio</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="proyecto-media">
+                <img src="https://via.placeholder.com/800x500" alt="Captura del proyecto 1">
+                <img src="https://via.placeholder.com/800x500" alt="Captura del proyecto 2">
+            </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Sección "Tools" -->
-    <section id="tools">
-        <h2>Herramientas que domino</h2>
-        <div class="skill-box">
-            <ul>
-                <li>Visual Studio Code</li>
-                <li>Git/GitHub</li>
-                <li>[Otras herramientas...]</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Sección de Proyectos (con enlaces a detalles) -->
-    <section id="proyectos">
-        <h2>Mis Proyectos</h2>
-        
-        <!-- Proyecto 1 - Con enlace a su sección detallada -->
-        <div class="proyecto">
-            <h3><a href="#proyecto-1">Proyecto 1</a></h3>
-            <p>Descripción breve del proyecto.</p>
-        </div>
-
-        <!-- Proyecto 2 -->
-        <div class="proyecto">
-            <h3><a href="#proyecto-2">Proyecto 2</a></h3>
-            <p>Descripción breve del proyecto.</p>
-        </div>
-    </section>
-
-    <!-- Detalles de cada proyecto (ocultos inicialmente) -->
-    <section id="proyecto-1" style="display: none;">
-        <a href="#proyectos" class="back-btn">← Volver a proyectos</a>
-        <h2>Proyecto 1</h2>
-        <p>Descripción detallada del proyecto...</p>
-        <h3>Tecnologías usadas:</h3>
-        <ul>
-            <li>HTML/CSS</li>
-            <li>JavaScript</li>
-        </ul>
-        <a href="#">Enlace al proyecto vivo</a>
-    </section>
-
-    <section id="proyecto-2" style="display: none;">
-        <a href="#proyectos" class="back-btn">← Volver a proyectos</a>
-        <h2>Proyecto 2</h2>
-        <p>Descripción detallada del proyecto...</p>
-        <h3>Tecnologías usadas:</h3>
-        <ul>
-            <li>React</li>
-            <li>Node.js</li>
-        </ul>
-        <a href="#">Enlace al proyecto vivo</a>
-    </section>
-
-    <!-- Sección de Contacto -->
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <ul>
-            <li>Email: <a href="mailto:tucorreo@ejemplo.com">tucorreo@ejemplo.com</a></li>
-            <li>GitHub: <a href="https://github.com/tuusuario" target="_blank">@tuusuario</a></li>
-            <li>LinkedIn: <a href="#" target="_blank">Tu perfil</a></li>
-        </ul>
-    </section>
-
-    <!-- Pie de página -->
-    <footer>
-        <p>&copy; 2024 - Portfolio de [Tu Nombre]</p>
+    <!-- Footer de Contacto -->
+    <footer id="contacto">
+        <h3>¿Trabajamos juntos?</h3>
+        <p>
+            Email: <a href="mailto:tu@email.com">tu@email.com</a> | 
+            GitHub: <a href="https://github.com/tuusuario" target="_blank">@tuusuario</a> |
+            LinkedIn: <a href="https://linkedin.com/in/tuperfil" target="_blank">Mi perfil</a>
+        </p>
     </footer>
 
-    <!-- JavaScript para mostrar/ocultar detalles de proyectos -->
+    <!-- JavaScript -->
     <script>
-        document.querySelectorAll('.proyecto a').forEach(link => {
-            link.addEventListener('click', function(e) {
+        // Mostrar proyecto en pantalla completa
+        document.querySelectorAll('.ver-proyecto').forEach(boton => {
+            boton.addEventListener('click', function(e) {
                 e.preventDefault();
-                // Oculta todos los detalles de proyectos
-                document.querySelectorAll('section[id^="proyecto-"]').forEach(sec => {
-                    sec.style.display = 'none';
+                const proyectoId = this.parentElement.getAttribute('data-proyecto');
+                document.getElementById('contenido-principal').style.display = 'none';
+                document.getElementById(`proyecto-${proyectoId}`).style.display = 'block';
+            });
+        });
+
+        // Cerrar proyecto
+        document.querySelectorAll('.cerrar-proyecto').forEach(boton => {
+            boton.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.proyecto-detalle').forEach(proyecto => {
+                    proyecto.style.display = 'none';
                 });
-                // Muestra solo el proyecto seleccionado
-                const targetId = this.getAttribute('href').substring(1);
-                document.getElementById(targetId).style.display = 'block';
-                // Desplaza la vista al proyecto
-                document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+                document.getElementById('contenido-principal').style.display = 'block';
+            });
+        });
+
+        // Scroll suave para la navbar
+        document.querySelectorAll('#navbar a').forEach(enlace => {
+            enlace.addEventListener('click', function(e) {
+                if (!this.getAttribute('href').startsWith('#')) return;
+                
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                // Oculta detalles de proyecto si están visibles
+                document.querySelectorAll('.proyecto-detalle').forEach(proyecto => {
+                    proyecto.style.display = 'none';
+                });
+                
+                // Muestra contenido principal y hace scroll
+                document.getElementById('contenido-principal').style.display = 'block';
+                window.scrollTo({
+                    top: targetSection.offsetTop - 70,
+                    behavior: 'smooth'
+                });
             });
         });
     </script>
