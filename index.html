@@ -10,35 +10,41 @@
     <!-- Barra de navegación -->
     <nav id="navbar">
         <ul>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#tools">Herramientas</a></li>
             <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#tools">Herramientas</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
 
     <!-- Cabecera -->
     <header>
-        <h1>[TU NOMBRE]</h1>
-        <p>Tu profesión o eslogan</p>
+        <div class="header-content">
+            <h1>[TU NOMBRE]</h1>
+            <p>Tu profesión o eslogan</p>
+        </div>
+        <a href="#sobre-mi" class="scroll-down">  <!-- Cambiado de #proyectos a #sobre-mi -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14M19 12l-7 7-7-7"/>
+            </svg>
+        </a>
     </header>
     <!-- Contenido principal -->
     <main id="contenido-principal">
-        <!-- Sección de Proyectos -->
-        <section id="proyectos">
-            <h2>Mis Proyectos</h2>
-            
-            <div class="proyecto" data-proyecto="1">
-                <h3>Landing Page para Restaurante</h3>
-                <p>Sitio responsive con reservas online.</p>
-                <a href="#" class="ver-proyecto">Ver detalles</a>
-            </div>
-            
-            <div class="proyecto" data-proyecto="2">
-                <h3>Aplicación de Tareas</h3>
-                <p>Gestor de tareas con React y Firebase.</p>
-                <a href="#" class="ver-proyecto">Ver detalles</a>
+        <!-- Sección Sobre mí -->
+        <section id="sobre-mi">
+            <h2>Sobre mí</h2>
+            <div class="sobre-mi-contenido">
+                <div class="sobre-mi-texto">
+                    <p>¡Hola! Soy [Nombre], apasionado por crear soluciones digitales...</p>
+                    <!-- Añade más texto sobre ti aquí -->
+                </div>
+                <div class="cv-descarga">
+                    <h3>Mi Curriculum</h3>
+                    <img src="https://cdn-icons-png.flaticon.com/512/3132/3132693.png" alt="Icono de CV" class="cv-icon">
+                    <a href="ruta/a/tu-cv.pdf" download class="boton-cv">Descargar CV</a>
+                </div>
             </div>
         </section>
 
@@ -74,6 +80,23 @@
             </div>
         </section>
 
+        <!-- Sección de Proyectos -->
+        <section id="proyectos">
+            <h2>Mis Proyectos</h2>
+            
+            <div class="proyecto" data-proyecto="1">
+                <h3>Landing Page para Restaurante</h3>
+                <p>Sitio responsive con reservas online.</p>
+                <a href="#" class="ver-proyecto">Ver detalles</a>
+            </div>
+            
+            <div class="proyecto" data-proyecto="2">
+                <h3>Aplicación de Tareas</h3>
+                <p>Gestor de tareas con React y Firebase.</p>
+                <a href="#" class="ver-proyecto">Ver detalles</a>
+            </div>
+        </section>
+
         <!-- Sección de Herramientas -->
         <section id="tools">
             <h2>Herramientas</h2>
@@ -97,22 +120,6 @@
                 <div class="herramienta-item">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman">
                     <p>Postman</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección Sobre mí -->
-        <section id="sobre-mi">
-            <h2>Sobre mí</h2>
-            <div class="sobre-mi-contenido">
-                <div class="sobre-mi-texto">
-                    <p>¡Hola! Soy [Nombre], apasionado por crear soluciones digitales...</p>
-                    <!-- Añade más texto sobre ti aquí -->
-                </div>
-                <div class="cv-descarga">
-                    <h3>Mi Curriculum</h3>
-                    <img src="https://cdn-icons-png.flaticon.com/512/3132/3132693.png" alt="Icono de CV" class="cv-icon">
-                    <a href="ruta/a/tu-cv.pdf" download class="boton-cv">Descargar CV</a>
                 </div>
             </div>
         </section>
@@ -259,6 +266,23 @@
                     behavior: 'smooth'
                 });
             });
+            
+        // Scroll suave para navbar Y flecha
+        document.querySelectorAll('#navbar a, .scroll-down').forEach(enlace => {
+            enlace.addEventListener('click', function(e) {
+                if (!this.getAttribute('href').startsWith('#')) return;
+                
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetSection.offsetTop - 70, // Ajusta el -70 si necesitas más/menos espacio
+                    behavior: 'smooth'
+                });
+            });
+        });
+
         });
     </script>
 </body>
