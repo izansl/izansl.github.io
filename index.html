@@ -229,6 +229,7 @@
             boton.addEventListener('click', function(e) {
                 e.preventDefault();
                 const proyectoId = this.parentElement.getAttribute('data-proyecto');
+                document.body.style.overflow = "hidden"; // bloquea scroll
                 document.getElementById('contenido-principal').style.display = 'none';
                 document.getElementById(`proyecto-${proyectoId}`).style.display = 'block';
             });
@@ -238,6 +239,7 @@
         document.querySelectorAll('.cerrar-proyecto').forEach(boton => {
             boton.addEventListener('click', function(e) {
                 e.preventDefault();
+                document.body.style.overflow = "auto"; // vuelve a activar scroll
                 document.querySelectorAll('.proyecto-detalle').forEach(proyecto => {
                     proyecto.style.display = 'none';
                 });
