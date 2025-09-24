@@ -1,291 +1,192 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio de [Tu Nombre]</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Your Name] Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Barra de navegación -->
-    <nav id="navbar">
-        <ul>
-            <li><a href="#sobre-mi">Sobre mí</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#tools">Herramientas</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
+  <!-- Navigation Bar -->
+  <nav id="navbar">
+    <ul>
+      <li><a href="#sobre-mi">About me</a></li>
+      <li><a href="#habilidades">Skills</a></li>
+      <li><a href="#proyectos">Projects</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#contacto">Contact</a></li>
+    </ul>
+  </nav>
 
-    <!-- Cabecera -->
-    <header>
-        <div class="header-content">
-            <h1>[TU NOMBRE]</h1>
-            <p>Tu profesión o eslogan</p>
-        </div>
-        <a href="#sobre-mi" class="scroll-down">  <!-- Cambiado de #proyectos a #sobre-mi -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 5v14M19 12l-7 7-7-7"/>
-            </svg>
-        </a>
-    </header>
-    <!-- Contenido principal -->
-    <main id="contenido-principal">
-        <!-- Sección Sobre mí -->
-        <section id="sobre-mi">
-            <h2>Sobre mí</h2>
-            <div class="sobre-mi-contenido">
-                <div class="sobre-mi-texto">
-                    <p>¡Hola! Soy [Nombre], apasionado por crear soluciones digitales...</p>
-                    <!-- Añade más texto sobre ti aquí -->
-                </div>
-                <div class="cv-descarga">
-                    <h3>Mi Curriculum</h3>
-                    <img src="https://cdn-icons-png.flaticon.com/512/3132/3132693.png" alt="Icono de CV" class="cv-icon">
-                    <a href="ruta/a/tu-cv.pdf" download class="boton-cv">Descargar CV</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección de Habilidades -->
-        <section id="habilidades">
-            <h2>Habilidades</h2>
-            <div class="habilidades-container">
-                <!-- Columna de Hard Skills -->
-                <div class="habilidades-columna">
-                    <h3>Habilidades Técnicas</h3>
-                    <ul>
-                        <li>HTML5, CSS3, JavaScript (ES6+)</li>
-                        <li>React, Node.js, Express</li>
-                        <li>Python, Django</li>
-                        <li>Bases de datos SQL y NoSQL</li>
-                        <li>Diseño responsive</li>
-                        <li>Git y control de versiones</li>
-                    </ul>
-                </div>
-                
-                <!-- Columna de Soft Skills -->
-                <div class="habilidades-columna">
-                    <h3>Habilidades Blandas</h3>
-                    <ul>
-                        <li>Trabajo en equipo</li>
-                        <li>Comunicación efectiva</li>
-                        <li>Resolución de problemas</li>
-                        <li>Gestión del tiempo</li>
-                        <li>Adaptabilidad</li>
-                        <li>Pensamiento crítico</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección de Proyectos -->
-        <section id="proyectos">
-            <h2>Mis Proyectos</h2>
-            
-            <div class="proyecto" data-proyecto="1">
-                <h3>Landing Page para Restaurante</h3>
-                <p>Sitio responsive con reservas online.</p>
-                <a href="#" class="ver-proyecto">Ver detalles</a>
-            </div>
-            
-            <div class="proyecto" data-proyecto="2">
-                <h3>Aplicación de Tareas</h3>
-                <p>Gestor de tareas con React y Firebase.</p>
-                <a href="#" class="ver-proyecto">Ver detalles</a>
-            </div>
-        </section>
-
-        <!-- Sección de Herramientas -->
-        <section id="tools">
-            <h2>Herramientas</h2>
-            <div class="herramientas-container">
-                <div class="herramienta-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
-                    <p>Git</p>
-                </div>
-                <div class="herramienta-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
-                    <p>GitHub</p>
-                </div>
-                <div class="herramienta-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code">
-                    <p>VS Code</p>
-                </div>
-                <div class="herramienta-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
-                    <p>Figma</p>
-                </div>
-                <div class="herramienta-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman">
-                    <p>Postman</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Detalles de proyectos (pantalla completa) -->
-    <div id="proyecto-1" class="proyecto-detalle">
-        <a href="#" class="cerrar-proyecto">← Volver</a>
-        <div class="proyecto-detalle-container">
-            <div class="proyecto-header">
-                <h2>Landing Page para Restaurante</h2>
-            </div>
-            
-            <div class="proyecto-info">
-                <div class="info-section">
-                    <h3>About del proyecto</h3>
-                    <p>Desarrollo de una landing page completamente responsive para un restaurante local, incluyendo sistema de reservas online, galería de imágenes y menú interactivo.</p>
-                </div>
-                
-                <div class="info-section">
-                    <h3>Roles desempeñados</h3>
-                    <ul>
-                        <li>Diseñador UX/UI</li>
-                        <li>Desarrollador Frontend</li>
-                        <li>Responsable de despliegue</li>
-                    </ul>
-                </div>
-                
-                <div class="info-section">
-                    <h3>Tiempo de desarrollo</h3>
-                    <p>3 semanas (Diseño: 1 semana | Desarrollo: 2 semanas)</p>
-                </div>
-                
-                <div class="info-section">
-                    <h3>Links útiles</h3>
-                    <div class="proyecto-links">
-                        <a href="#" target="_blank">Ver proyecto en vivo</a>
-                        <a href="#" target="_blank">Código en GitHub</a>
-                        <a href="#" target="_blank">Documentación</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="proyecto-media">
-                <img src="https://via.placeholder.com/800x500" alt="Captura del proyecto 1">
-                <img src="https://via.placeholder.com/800x500" alt="Captura del proyecto 2">
-            </div>
-        </div>
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <h1>IZAN SÁNCHEZ LOZANO</h1>
+      <p>Game and Narrative Designer</p>
     </div>
+  </header>
 
-    <div id="proyecto-2" class="proyecto-detalle">
-        <a href="#" class="cerrar-proyecto">← Volver</a>
-        <div class="proyecto-detalle-container">
-            <div class="proyecto-header">
-                <h2>Aplicación de Tareas</h2>
-            </div>
-            
-            <div class="proyecto-info">
-                <div class="info-section">
-                    <h3>About del proyecto</h3>
-                    <p>Aplicación de gestión de tareas con autenticación de usuarios y sincronización en tiempo real usando Firebase.</p>
-                </div>
-                
-                <div class="info-section">
-                    <h3>Roles desempeñados</h3>
-                    <ul>
-                        <li>Desarrollador Full Stack</li>
-                        <li>Diseñador de interfaz</li>
-                    </ul>
-                </div>
-                
-                <div class="info-section">
-                    <h3>Tiempo de desarrollo</h3>
-                    <p>4 semanas (Planificación: 1 semana | Desarrollo: 3 semanas)</p>
-                </div>
-                
-                <div class="info-section">
-                    <h3>Links útiles</h3>
-                    <div class="proyecto-links">
-                        <a href="#" target="_blank">Demo en Vercel</a>
-                        <a href="#" target="_blank">Repositorio</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="proyecto-media">
-                <img src="https://via.placeholder.com/800x500" alt="Captura del proyecto 1">
-                <img src="https://via.placeholder.com/800x500" alt="Captura del proyecto 2">
-            </div>
+  <!-- Main Content -->
+  <main id="contenido-principal">
+    <!-- About Me -->
+    <section id="sobre-mi" class="reveal">
+      <h2>About me</h2>
+      <div class="sobre-mi-contenido">
+        <div class="sobre-mi-texto">
+          <p>Hello! I'm [Your Name], passionate about creating digital solutions...</p>
         </div>
+        <div class="cv-descarga">
+          <h3>My Resume</h3>
+          <img src="https://cdn-icons-png.flaticon.com/512/3132/3132693.png" alt="Resume Icon" class="cv-icon">
+          <a href="ruta/a/tu-cv.pdf" download class="boton-cv">Download CV</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="habilidades" class="reveal">
+      <h2>Skills</h2>
+      <div class="habilidades-container">
+        <div class="habilidades-columna">
+          <h3>Technical Skills</h3>
+          <ul>
+            <li>HTML5, CSS3, JavaScript (ES6+)</li>
+            <li>React, Node.js, Express</li>
+            <li>Python, Django</li>
+            <li>SQL & NoSQL Databases</li>
+            <li>Responsive Design</li>
+            <li>Git & Version Control</li>
+          </ul>
+        </div>
+        <div class="habilidades-columna">
+          <h3>Soft Skills</h3>
+          <ul>
+            <li>Teamwork</li>
+            <li>Effective Communication</li>
+            <li>Problem Solving</li>
+            <li>Time Management</li>
+            <li>Adaptability</li>
+            <li>Critical Thinking</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="proyectos" class="reveal">
+      <h2>Projects</h2>
+      <div class="proyectos-grid">
+        <div class="proyecto">
+          <div class="proyecto-img">
+            <img src="https://via.placeholder.com/400x250" alt="Project Preview">
+          </div>
+          <div class="proyecto-info">
+            <h3>Restaurant Landing Page</h3>
+            <p>Responsive website with booking system.</p>
+          </div>
+        </div>
+        <div class="proyecto">
+          <div class="proyecto-img">
+            <img src="https://via.placeholder.com/400x250" alt="Project Preview">
+          </div>
+          <div class="proyecto-info">
+            <h3>Task Manager App</h3>
+            <p>React + Firebase task management tool.</p>
+          </div>
+        </div>
+        <div class="proyecto">
+          <div class="proyecto-img">
+            <img src="https://via.placeholder.com/400x250" alt="Project Preview">
+          </div>
+          <div class="proyecto-info">
+            <h3>Future Project</h3>
+            <p>Coming soon...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tools -->
+    <section id="tools" class="reveal">
+      <h2>Tools</h2>
+      <div class="herramientas-container">
+        <div class="herramienta-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+          <p>Git</p>
+        </div>
+        <div class="herramienta-item">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
+          <p>GitHub</p>
+        </div>
+        <div class="herramienta-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code">
+          <p>VS Code</p>
+        </div>
+        <div class="herramienta-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
+          <p>Figma</p>
+        </div>
+        <div class="herramienta-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman">
+          <p>Postman</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contacto" class="reveal">
+    <h3>Let's work together</h3>
+    <div class="contact-icons">
+      <a href="mailto:tu@email.com">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Gmail">
+      </a>
+      <a href="https://github.com/tuusuario" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
+      </a>
+      <a href="https://linkedin.com/in/tuperfil" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+      </a>
     </div>
+  </footer>
 
-    <!-- Footer de Contacto -->
-    <footer id="contacto">
-        <h3>¿Trabajamos juntos?</h3>
-        <p>
-            Email: <a href="mailto:tu@email.com">tu@email.com</a> | 
-            GitHub: <a href="https://github.com/tuusuario" target="_blank">@tuusuario</a> |
-            LinkedIn: <a href="https://linkedin.com/in/tuperfil" target="_blank">Mi perfil</a>
-        </p>
-    </footer>
-
-    <!-- JavaScript -->
-    <script>
-        // Mostrar proyecto en pantalla completa
-        document.querySelectorAll('.ver-proyecto').forEach(boton => {
-            boton.addEventListener('click', function(e) {
-                e.preventDefault();
-                const proyectoId = this.parentElement.getAttribute('data-proyecto');
-                document.body.style.overflow = "hidden"; // bloquea scroll
-                document.getElementById('contenido-principal').style.display = 'none';
-                document.getElementById(`proyecto-${proyectoId}`).style.display = 'block';
-            });
+  <!-- JavaScript -->
+  <script>
+    // Smooth scroll slower
+    document.querySelectorAll('#navbar a').forEach(enlace => {
+      enlace.addEventListener('click', function(e) {
+        if (!this.getAttribute('href').startsWith('#')) return;
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        window.scrollTo({
+          top: targetSection.offsetTop - 70,
+          behavior: 'smooth'
         });
+      });
+    });
 
-        // Cerrar proyecto
-        document.querySelectorAll('.cerrar-proyecto').forEach(boton => {
-            boton.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.body.style.overflow = "auto"; // vuelve a activar scroll
-                document.querySelectorAll('.proyecto-detalle').forEach(proyecto => {
-                    proyecto.style.display = 'none';
-                });
-                document.getElementById('contenido-principal').style.display = 'block';
-            });
-        });
+    // Reveal animations only once
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
 
-        // Scroll suave para la navbar
-        document.querySelectorAll('#navbar a').forEach(enlace => {
-            enlace.addEventListener('click', function(e) {
-                if (!this.getAttribute('href').startsWith('#')) return;
-                
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetSection = document.querySelector(targetId);
-                
-                // Oculta detalles de proyecto si están visibles
-                document.querySelectorAll('.proyecto-detalle').forEach(proyecto => {
-                    proyecto.style.display = 'none';
-                });
-                
-                // Muestra contenido principal y hace scroll
-                document.getElementById('contenido-principal').style.display = 'block';
-                window.scrollTo({
-                    top: targetSection.offsetTop - 70,
-                    behavior: 'smooth'
-                });
-            });
-            
-        // Scroll suave para navbar Y flecha
-        document.querySelectorAll('#navbar a, .scroll-down').forEach(enlace => {
-            enlace.addEventListener('click', function(e) {
-                if (!this.getAttribute('href').startsWith('#')) return;
-                
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetSection = document.querySelector(targetId);
-                
-                window.scrollTo({
-                    top: targetSection.offsetTop - 70, // Ajusta el -70 si necesitas más/menos espacio
-                    behavior: 'smooth'
-                });
-            });
-        });
+    document.querySelectorAll('.reveal').forEach(sec => {
+      observer.observe(sec);
+    });
 
-        });
-    </script>
+    // Click en proyectos para más detalle
+    document.querySelectorAll('.proyecto').forEach(proyecto => {
+      proyecto.addEventListener('click', function() {
+        const titulo = this.querySelector('h3').textContent;
+        alert(`Ver detalles de: ${titulo}\n\nAquí puedes agregar más información sobre el proyecto o redirigir a otra página.`);
+      });
+    });
+  </script>
 </body>
 </html>
