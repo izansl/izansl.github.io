@@ -33,7 +33,7 @@
       <h2>About me</h2>
       <div class="sobre-mi-contenido">
         <div class="sobre-mi-texto">
-          <p>Hello! I'm [Your Name], passionate about creating digital solutions...</p>
+          <p>Hello! I'm Izan Sánchez Lozano, passionate about creating immersive gaming experiences and compelling narratives...</p>
         </div>
         <div class="cv-descarga">
           <h3>My Resume</h3>
@@ -48,23 +48,23 @@
       <h2>Skills</h2>
       <div class="habilidades-container">
         <div class="habilidades-columna">
-          <h3>Technical Skills</h3>
+          <h3>Game Design Skills</h3>
           <ul>
-            <li>HTML5, CSS3, JavaScript (ES6+)</li>
-            <li>React, Node.js, Express</li>
-            <li>Python, Django</li>
-            <li>SQL & NoSQL Databases</li>
-            <li>Responsive Design</li>
-            <li>Git & Version Control</li>
+            <li>Unity & Unreal Engine</li>
+            <li>Game Mechanics Design</li>
+            <li>Level Design</li>
+            <li>Narrative Design</li>
+            <li>Prototyping</li>
+            <li>User Experience (UX)</li>
           </ul>
         </div>
         <div class="habilidades-columna">
           <h3>Soft Skills</h3>
           <ul>
-            <li>Teamwork</li>
-            <li>Effective Communication</li>
+            <li>Creative Storytelling</li>
+            <li>Team Collaboration</li>
             <li>Problem Solving</li>
-            <li>Time Management</li>
+            <li>Project Management</li>
             <li>Adaptability</li>
             <li>Critical Thinking</li>
           </ul>
@@ -76,31 +76,31 @@
     <section id="proyectos" class="reveal">
       <h2>Projects</h2>
       <div class="proyectos-grid">
-        <div class="proyecto">
+        <div class="proyecto" data-project="adventure-quest">
           <div class="proyecto-img">
-            <img src="https://via.placeholder.com/400x250" alt="Project Preview">
+            <img src="https://via.placeholder.com/400x250/1a1a2e/00ffc8?text=Adventure+Quest" alt="Project Preview">
           </div>
           <div class="proyecto-info">
-            <h3>Restaurant Landing Page</h3>
-            <p>Responsive website with booking system.</p>
+            <h3>Adventure Quest RPG</h3>
+            <p>Open-world RPG with branching storylines and complex character development.</p>
           </div>
         </div>
-        <div class="proyecto">
+        <div class="proyecto" data-project="puzzle-master">
           <div class="proyecto-img">
-            <img src="https://via.placeholder.com/400x250" alt="Project Preview">
+            <img src="https://via.placeholder.com/400x250/16213e/39ff14?text=Puzzle+Master" alt="Project Preview">
           </div>
           <div class="proyecto-info">
-            <h3>Task Manager App</h3>
-            <p>React + Firebase task management tool.</p>
+            <h3>Puzzle Master</h3>
+            <p>Mind-bending puzzle game with innovative mechanics and atmospheric storytelling.</p>
           </div>
         </div>
-        <div class="proyecto">
+        <div class="proyecto" data-project="future-project">
           <div class="proyecto-img">
-            <img src="https://via.placeholder.com/400x250" alt="Project Preview">
+            <img src="https://via.placeholder.com/400x250/0f0c29/fbff00?text=Coming+Soon" alt="Project Preview">
           </div>
           <div class="proyecto-info">
             <h3>Future Project</h3>
-            <p>Coming soon...</p>
+            <p>Exciting new project in development...</p>
           </div>
         </div>
       </div>
@@ -150,23 +150,113 @@
     </div>
   </footer>
 
+  <!-- Modal -->
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modal-title">Project Title</h2>
+        <span class="close">&times;</span>
+      </div>
+      <div class="modal-body">
+        <div class="modal-left">
+          <div class="info-block">
+            <h3>Description</h3>
+            <p id="modal-description">Project description will appear here...</p>
+          </div>
+          <div class="info-block">
+            <h3>My Role</h3>
+            <ul id="modal-role">
+              <li>Role details will appear here...</li>
+            </ul>
+          </div>
+          <div class="info-block">
+            <h3>Useful Links</h3>
+            <div id="modal-links">
+
+            </div>
+          </div>
+        </div>
+        <div class="modal-right">
+          <img id="modal-image" class="modal-image" src="" alt="Project Image">
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- JavaScript -->
   <script>
-    // Smooth scroll slower
+    const projectData = {
+      'adventure-quest': {
+        title: 'Adventure Quest RPG',
+        description: 'A comprehensive open-world RPG featuring multiple branching storylines, complex character development systems, and immersive world-building. The game incorporates innovative dialogue systems and moral choice mechanics that significantly impact the narrative progression.',
+        role: [
+          'Lead Game Designer - Conceptualized core mechanics and player progression systems',
+          'Narrative Designer - Crafted main storyline and character arcs',
+          'Level Designer - Created immersive environments and quest chains',
+          'Systems Designer - Balanced combat mechanics and character abilities'
+        ],
+        links: [
+          { text: 'Play Demo', url: '#' },
+          { text: 'GitHub Repository', url: '#' },
+          { text: 'Design Document', url: '#' }
+        ],
+        image: 'https://via.placeholder.com/600x400/1a1a2e/00ffc8?text=Adventure+Quest+RPG'
+      },
+      'puzzle-master': {
+        title: 'Puzzle Master',
+        description: 'An innovative puzzle game that combines traditional puzzle-solving with atmospheric storytelling. Features unique mechanics that evolve throughout the game, challenging players to think creatively while uncovering a mysterious narrative.',
+        role: [
+          'Game Designer - Designed core puzzle mechanics and progression',
+          'Narrative Designer - Developed atmospheric storytelling elements',
+          'UX Designer - Created intuitive user interface and controls',
+          'Playtester Coordinator - Organized and analyzed player feedback sessions'
+        ],
+        links: [
+          { text: 'Steam Page', url: '#' },
+          { text: 'Gameplay Trailer', url: '#' },
+          { text: 'Press Kit', url: '#' }
+        ],
+        image: 'https://via.placeholder.com/600x400/16213e/39ff14?text=Puzzle+Master'
+      },
+      'future-project': {
+        title: 'Future Project',
+        description: 'An exciting new project currently in development. While details are still under wraps, this project promises to push the boundaries of interactive storytelling and innovative gameplay mechanics.',
+        role: [
+          'Concept Designer - Developing initial game concepts and mechanics',
+          'Research & Development - Exploring new technologies and design patterns',
+          'Prototype Development - Creating proof-of-concept builds'
+        ],
+        links: [
+          { text: 'Development Blog', url: '#' },
+          { text: 'Early Concepts', url: '#' }
+        ],
+        image: 'https://via.placeholder.com/600x400/0f0c29/fbff00?text=Coming+Soon'
+      }
+    };
+
+    const modal = document.getElementById('projectModal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDescription = document.getElementById('modal-description');
+    const modalRole = document.getElementById('modal-role');
+    const modalLinks = document.getElementById('modal-links');
+    const modalImage = document.getElementById('modal-image');
+    const closeBtn = document.querySelector('.close');
+
     document.querySelectorAll('#navbar a').forEach(enlace => {
       enlace.addEventListener('click', function(e) {
-        if (!this.getAttribute('href').startsWith('#')) return;
+        if (!this.getAttribute('href').startsWith('#') || this.getAttribute('href') === '#') return;
         e.preventDefault();
         const targetId = this.getAttribute('href');
         const targetSection = document.querySelector(targetId);
-        window.scrollTo({
-          top: targetSection.offsetTop - 70,
-          behavior: 'smooth'
-        });
+        if (targetSection) {
+          window.scrollTo({
+            top: targetSection.offsetTop - 70,
+            behavior: 'smooth'
+          });
+        }
       });
     });
 
-    // Reveal animations only once
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -180,12 +270,65 @@
       observer.observe(sec);
     });
 
-    // Click en proyectos para más detalle
     document.querySelectorAll('.proyecto').forEach(proyecto => {
       proyecto.addEventListener('click', function() {
-        const titulo = this.querySelector('h3').textContent;
-        alert(`Ver detalles de: ${titulo}\n\nAquí puedes agregar más información sobre el proyecto o redirigir a otra página.`);
+        const projectId = this.getAttribute('data-project');
+        const project = projectData[projectId];
+        
+        if (project) {
+          modalTitle.textContent = project.title;
+          modalDescription.textContent = project.description;
+          modalImage.src = project.image;
+          modalImage.alt = project.title;
+          
+          modalRole.innerHTML = '';
+          project.role.forEach(roleItem => {
+            const li = document.createElement('li');
+            li.textContent = roleItem;
+            modalRole.appendChild(li);
+          });
+          
+          modalLinks.innerHTML = '';
+          project.links.forEach(link => {
+            const a = document.createElement('a');
+            a.href = link.url;
+            a.textContent = link.text;
+            a.className = 'project-link';
+            a.target = '_blank';
+            modalLinks.appendChild(a);
+          });
+          
+          modal.style.display = 'block';
+          setTimeout(() => {
+            modal.classList.add('show');
+          }, 10);
+        }
       });
+    });
+
+    closeBtn.addEventListener('click', function() {
+      modal.classList.remove('show');
+      setTimeout(() => {
+        modal.style.display = 'none';
+      }, 300);
+    });
+
+    window.addEventListener('click', function(event) {
+      if (event.target === modal) {
+        modal.classList.remove('show');
+        setTimeout(() => {
+          modal.style.display = 'none';
+        }, 300);
+      }
+    });
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape' && modal.style.display === 'block') {
+        modal.classList.remove('show');
+        setTimeout(() => {
+          modal.style.display = 'none';
+        }, 300);
+      }
     });
   </script>
 </body>
