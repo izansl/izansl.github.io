@@ -4,12 +4,13 @@
   --fondo1: #000000;
   --fondo2: #000000;
   --fondo3: #000000;
-  --neon-turquese: #00ffc8;
+  --neon-turquese: #ffffff;
   --neon-green: #39ff14;
   --neon-yellow: #fbff00;
   --neon-red: #ff002b;
   --neon-pink: #ff00c8;
   --texto-principal: #e0e0e0;
+  --filter-neon-turquese: brightness(0) saturate(100%) invert(100%);
 }
 
 body {
@@ -45,7 +46,19 @@ body {
   justify-content: center;
   font-size: 1.1rem;
   backdrop-filter: blur(6px);
-  border-bottom: 2px solid var(--neon-yellow);
+  border-bottom: 2px solid var(--neon-turquese);
+}
+
+#navbar::after {
+  content: "";
+  position: absolute;
+  bottom: -18%;
+  left: 0%;
+  width: 100%;
+  height: 30px;
+  background: url("Assets/CustomNavBar.png") no-repeat center;
+  background-size: contain;
+  filter: var(--filter-neon-turquese);
 }
 
 #navbar ul {
@@ -106,11 +119,11 @@ header h1 {
   font-weight: bold;
   font-size: 5rem;
   margin-bottom: 1rem;
-  background: linear-gradient(270deg, var(--neon-turquese), var(--neon-turquese), var(--neon-green), var(--neon-yellow), var(--neon-red), var(--neon-pink));
+  background: var(--neon-turquese);
   background-size: 600% 600%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: colorShift 12s ease infinite;
+  position: relative;
 }
 
 @keyframes colorShift {
@@ -122,7 +135,19 @@ header h1 {
 header p {
   font-size: 2.5rem;
   color: var(--neon-turquese);
-  text-shadow: 0 0 5px var(--neon-turquese), 0 0 15px var(--neon-turquese);
+}
+
+header h1::after {
+  content: "";
+  position: absolute;
+  top: 70%;
+  left: 0%;
+  width: 100%;
+  height: 50px;
+  background: url("Assets/CustomBarName.png") no-repeat center;
+  background-size: contain;
+  filter: var(--filter-neon-turquese);
+  margin-top: 1rem;
 }
 
 /* ======================
@@ -139,7 +164,6 @@ section h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 1rem;
-  text-shadow: 0 0 10px var(--neon-turquese), 0 0 20px var(--neon-turquese);
 }
 
 /* Pop-up animation (first time only) */
@@ -171,6 +195,7 @@ section h2 {
   overflow: visible;
 }
 
+/* Borde sólido exterior */
 .proyecto::before {
   content: '';
   position: absolute;
@@ -181,6 +206,7 @@ section h2 {
   transition: all 0.3s ease;
 }
 
+/* Fondo interior negro (esto "corta" el borde para que solo se vea el perímetro) */
 .proyecto::after {
   content: '';
   position: absolute;
@@ -262,20 +288,45 @@ section h2 {
 }
 
 .modal-content {
-  background: linear-gradient(135deg, var(--fondo1), var(--fondo2));
+  position: relative;
+  background: #000000;
   margin: 2% auto;
   padding: 0;
-  border: 3px solid var(--neon-turquese);
   width: 90%;
   max-width: 1200px;
   height: 90%;
   clip-path: polygon(30px 0%, 100% 0%, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0% 100%, 0% 30px);
-  box-shadow: 0 0 30px var(--neon-turquese), 0 0 60px rgba(0,255,200,0.3);
-  position: relative;
   display: flex;
   flex-direction: column;
   transform: scale(0.8);
   transition: transform 0.3s ease;
+  overflow: visible;
+}
+
+/* Borde sólido exterior para modal-content */
+.modal-content::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  background: var(--neon-turquese);
+  clip-path: polygon(30px 0%, 100% 0%, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0% 100%, 0% 30px);
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+/* Fondo interior negro para modal-content */
+.modal-content::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #000000;
+  clip-path: polygon(33px 3px, calc(100% - 3px) 3px, calc(100% - 3px) calc(100% - 33px), calc(100% - 33px) calc(100% - 3px), 3px calc(100% - 3px), 3px 33px);
+  z-index: -1;
+}
+
+.modal-content > * {
+  position: relative;
+  z-index: 1;
 }
 
 .modal.show .modal-content {
@@ -291,7 +342,6 @@ section h2 {
 .modal-header h2 {
   color: var(--neon-yellow);
   margin: 0;
-  text-shadow: 0 0 10px var(--neon-yellow);
   font-size: 2.5rem;
 }
 
@@ -304,12 +354,10 @@ section h2 {
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
-  text-shadow: 0 0 10px var(--neon-red);
 }
 
 .close:hover {
   color: var(--neon-yellow);
-  text-shadow: 0 0 15px var(--neon-yellow);
   transform: scale(1.2);
 }
 
@@ -322,13 +370,14 @@ section h2 {
   overflow-y: auto;
 }
 
+/* Ocultar scrollbar pero mantener funcionalidad */
 .modal-body::-webkit-scrollbar {
   display: none;
 }
 
 .modal-body {
-  -ms-overflow-style: none; 
-  scrollbar-width: none; 
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .modal-left {
@@ -352,6 +401,7 @@ section h2 {
   overflow: visible;
 }
 
+/* Borde sólido exterior */
 .info-block::before {
   content: '';
   position: absolute;
@@ -362,6 +412,7 @@ section h2 {
   transition: all 0.3s ease;
 }
 
+/* Fondo interior negro */
 .info-block::after {
   content: '';
   position: absolute;
@@ -376,15 +427,14 @@ section h2 {
 }
 
 .info-block:hover::before {
-  background: var(--neon-turquese);
-  box-shadow: 0 0 15px var(--neon-turquese), 0 0 30px rgba(251,255,0,0.4);
+  background: var(--neon-yellow);
+  box-shadow: 0 0 15px var(--neon-yellow), 0 0 30px rgba(251,255,0,0.4);
 }
 
 .info-block h3 {
-  color: var(--neon-turquese);
+  color: var(--neon-yellow);
   margin-top: 0;
   margin-bottom: 1rem;
-  text-shadow: 0 0 8px var(--neon-turquese);
   font-size: 1.3rem;
   position: relative;
   z-index: 1;
@@ -597,7 +647,6 @@ section h2 {
   text-decoration: none;
   border-radius: 4px;
   font-weight: bold;
-  text-shadow: 0 0 5px var(--neon-turquese), 0 0 10px var(--neon-turquese);
   transition: all 0.3s;
 }
 
@@ -644,10 +693,35 @@ section h2 {
 /* ======================
    FOOTER
    ====================== */
-footer { 
+footer {
   background: rgba(0,0,0,0.6); 
   color: var(--texto-principal); 
   text-align: center; 
-  padding: 2rem; 
-  border-top: 2px solid var(--neon-yellow);
+  padding: 3rem 2rem 2rem; 
+  position: relative;
+  border-top: 2px solid var(--neon-turquese);
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: -7.5%;            
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 30px;
+  background: url("Assets/CustomNavBar.png") no-repeat center;
+  background-size: contain;
+  filter: var(--filter-neon-turquese);
+}
+
+.contact-icons a img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.contact-icons a img:hover {
+  transform: scale(1.1);
 }
