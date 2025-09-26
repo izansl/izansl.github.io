@@ -25,10 +25,32 @@ body {
   padding-top: 70px;
 }
 
-@keyframes fondoAnimado {
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
+@font-face {
+  font-family: "Cyber Alert";
+  src: url("Fonts/Cyber-Alert.regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nitro Break";
+  src: url("Fonts/Nitro_Break.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Deltha";
+  src: url("Fonts/Deltha.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rajdhani";
+  src: url("Fonts/Rajdhani.semibold.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* ======================
@@ -56,6 +78,7 @@ body {
   left: 0%;
   width: 100%;
   height: 30px;
+  rotate: 180deg;
   background: url("Assets/CustomNavBar.png") no-repeat center;
   background-size: contain;
   filter: var(--filter-neon-turquese);
@@ -102,7 +125,7 @@ body {
    ====================== */
 header { 
   text-align: center; 
-  margin-top: -70px;
+  margin-top: -30px;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -133,14 +156,15 @@ header h1 {
 }
 
 header p {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  margin-top: 75px;
   color: var(--neon-turquese);
 }
 
 header h1::after {
   content: "";
   position: absolute;
-  top: 70%;
+  top: 85%;
   left: 0%;
   width: 100%;
   height: 50px;
