@@ -76,31 +76,31 @@
     <section id="proyectos" class="reveal">
       <h2>Projects</h2>
       <div class="proyectos-grid">
-        <div class="proyecto" data-project="adventure-quest">
+        <div class="proyecto" data-project="w40k-tlm">
           <div class="proyecto-img">
-            <img src="https://via.placeholder.com/400x250/1a1a2e/00ffc8?text=Adventure+Quest" alt="Project Preview">
+            <img src="https://via.placeholder.com/400x250/1a1a2e/00ffc8?text=W40K-TLM" alt="Project Preview">
           </div>
           <div class="proyecto-info">
-            <h3>Adventure Quest RPG</h3>
-            <p>Open-world RPG with branching storylines and complex character development.</p>
+            <h3>W40K-TLM</h3>
+            <p>Warhammer 40,000 tactical level management experience.</p>
           </div>
         </div>
-        <div class="proyecto" data-project="puzzle-master">
+        <div class="proyecto" data-project="asylum-of-creation">
           <div class="proyecto-img">
-            <img src="https://via.placeholder.com/400x250/16213e/39ff14?text=Puzzle+Master" alt="Project Preview">
+            <img src="https://via.placeholder.com/400x250/16213e/39ff14?text=Asylum+of+Creation" alt="Project Preview">
           </div>
           <div class="proyecto-info">
-            <h3>Puzzle Master</h3>
-            <p>Mind-bending puzzle game with innovative mechanics and atmospheric storytelling.</p>
+            <h3>Asylum of Creation</h3>
+            <p>Dark atmospheric experience blending horror and creativity.</p>
           </div>
         </div>
-        <div class="proyecto" data-project="future-project">
+        <div class="proyecto" data-project="spits-and-crypts">
           <div class="proyecto-img">
-            <img src="https://via.placeholder.com/400x250/0f0c29/fbff00?text=Coming+Soon" alt="Project Preview">
+            <img src="https://via.placeholder.com/400x250/0f0c29/fbff00?text=Spits+%26+Crypts" alt="Project Preview">
           </div>
           <div class="proyecto-info">
-            <h3>Future Project</h3>
-            <p>Exciting new project in development...</p>
+            <h3>Spits & Crypts</h3>
+            <p>Dungeon-crawling adventure with unique mechanics.</p>
           </div>
         </div>
       </div>
@@ -205,54 +205,72 @@
 
   <!-- JavaScript -->
   <script>
+    // ============================================================
+    // AQUÍ ES DONDE DEBES EDITAR LA INFORMACIÓN DE TUS PROYECTOS
+    // ============================================================
     const projectData = {
-      'adventure-quest': {
-        title: 'Adventure Quest RPG',
-        description: 'A comprehensive open-world RPG featuring multiple branching storylines, complex character development systems, and immersive world-building. The game incorporates innovative dialogue systems and moral choice mechanics that significantly impact the narrative progression.',
+      'w40k-tlm': {
+        title: 'W40K-TLM',
+        // EDITA AQUÍ: Escribe la descripción completa de tu proyecto
+        description: 'Escribe aquí la descripción completa del proyecto W40K-TLM. Explica de qué trata el juego, sus mecánicas principales, el universo de Warhammer 40,000, y qué lo hace único.',
+        // EDITA AQUÍ: Lista tus roles en el proyecto (puedes añadir o quitar líneas)
         role: [
-          'Lead Game Designer - Conceptualized core mechanics and player progression systems',
-          'Narrative Designer - Crafted main storyline and character arcs',
-          'Level Designer - Created immersive environments and quest chains',
-          'Systems Designer - Balanced combat mechanics and character abilities'
+          'Rol 1 - Descripción de lo que hiciste',
+          'Rol 2 - Otra contribución al proyecto',
+          'Rol 3 - Más responsabilidades',
+          'Rol 4 - Añade más si es necesario'
         ],
+        // EDITA AQUÍ: Enlaces útiles (cambia el texto y las URLs)
+        links: [
+          { text: 'Itch.io Page', url: 'https://tu-url-aqui.com' },
+          { text: 'GitHub Repository', url: 'https://github.com/tu-repo' },
+          { text: 'Gameplay Video', url: 'https://youtube.com/tu-video' }
+        ],
+        // EDITA AQUÍ: URL de la imagen del proyecto
+        image: 'https://via.placeholder.com/600x400/1a1a2e/00ffc8?text=W40K-TLM'
+      },
+      'asylum-of-creation': {
+        title: 'Asylum of Creation',
+        // EDITA AQUÍ: Descripción de Asylum of Creation
+        description: 'Escribe aquí la descripción completa del proyecto Asylum of Creation. Describe la atmósfera, el tipo de juego, las mecánicas de horror y creatividad que mencionas.',
+        // EDITA AQUÍ: Tus roles en este proyecto
+        role: [
+          'Rol 1 - Tu contribución principal',
+          'Rol 2 - Otra área en la que trabajaste',
+          'Rol 3 - Más responsabilidades'
+        ],
+        // EDITA AQUÍ: Enlaces para este proyecto
         links: [
           { text: 'Play Demo', url: '#' },
-          { text: 'GitHub Repository', url: '#' },
-          { text: 'Design Document', url: '#' }
-        ],
-        image: 'https://via.placeholder.com/600x400/1a1a2e/00ffc8?text=Adventure+Quest+RPG'
-      },
-      'puzzle-master': {
-        title: 'Puzzle Master',
-        description: 'An innovative puzzle game that combines traditional puzzle-solving with atmospheric storytelling. Features unique mechanics that evolve throughout the game, challenging players to think creatively while uncovering a mysterious narrative.',
-        role: [
-          'Game Designer - Designed core puzzle mechanics and progression',
-          'Narrative Designer - Developed atmospheric storytelling elements',
-          'UX Designer - Created intuitive user interface and controls',
-          'Playtester Coordinator - Organized and analyzed player feedback sessions'
-        ],
-        links: [
-          { text: 'Steam Page', url: '#' },
-          { text: 'Gameplay Trailer', url: '#' },
+          { text: 'Development Blog', url: '#' },
           { text: 'Press Kit', url: '#' }
         ],
-        image: 'https://via.placeholder.com/600x400/16213e/39ff14?text=Puzzle+Master'
+        // EDITA AQUÍ: Imagen del proyecto
+        image: 'https://via.placeholder.com/600x400/16213e/39ff14?text=Asylum+of+Creation'
       },
-      'future-project': {
-        title: 'Future Project',
-        description: 'An exciting new project currently in development. While details are still under wraps, this project promises to push the boundaries of interactive storytelling and innovative gameplay mechanics.',
+      'spits-and-crypts': {
+        title: 'Spits & Crypts',
+        // EDITA AQUÍ: Descripción de Spits & Crypts
+        description: 'Escribe aquí la descripción completa del proyecto Spits & Crypts. Explica las mecánicas de dungeon-crawling, qué hace único a este juego, y cualquier elemento narrativo importante.',
+        // EDITA AQUÍ: Tus roles en este proyecto
         role: [
-          'Concept Designer - Developing initial game concepts and mechanics',
-          'Research & Development - Exploring new technologies and design patterns',
-          'Prototype Development - Creating proof-of-concept builds'
+          'Rol 1 - Lo que desarrollaste',
+          'Rol 2 - Otra contribución',
+          'Rol 3 - Más detalles de tu trabajo'
         ],
+        // EDITA AQUÍ: Enlaces para este proyecto
         links: [
-          { text: 'Development Blog', url: '#' },
-          { text: 'Early Concepts', url: '#' }
+          { text: 'Game Page', url: '#' },
+          { text: 'Trailer', url: '#' },
+          { text: 'Documentation', url: '#' }
         ],
-        image: 'https://via.placeholder.com/600x400/0f0c29/fbff00?text=Coming+Soon'
+        // EDITA AQUÍ: Imagen del proyecto
+        image: 'https://via.placeholder.com/600x400/0f0c29/fbff00?text=Spits+%26+Crypts'
       }
     };
+    // ============================================================
+    // FIN DE LA SECCIÓN DE EDICIÓN DE PROYECTOS
+    // ============================================================
 
     const modal = document.getElementById('projectModal');
     const modalTitle = document.getElementById('modal-title');
