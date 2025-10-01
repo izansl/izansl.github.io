@@ -7,6 +7,17 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="bg-lines">
+    <svg class="bg-line top" viewBox="0 0 1200 100" preserveAspectRatio="none">
+      <rect x="0" y="0" width="1200" height="100" class="bg-fill"/>
+      <polyline points="0,70 200,70 400,30 800,30 1000,70 1200,70" class="bg-stroke"/>
+    </svg>
+    <div class="bg-center-fill"></div>
+    <svg class="bg-line bottom" viewBox="0 0 1200 100" preserveAspectRatio="none">
+      <rect x="0" y="0" width="1200" height="100" class="bg-fill"/>
+      <polyline points="0,70 200,70 400,30 800,30 1000,70 1200,70" class="bg-stroke"/>
+    </svg>
+  </div>
   <!-- Vertical Navigation Bar -->
   <nav id="navbar">
     <div class="nav-item" data-section="home">
@@ -26,7 +37,6 @@
     </div>
     <div class="nav-item" data-section="contacto">
       <span>CONTACT</span>
-    </div>
   </nav>
 
   <!-- Main Container -->
@@ -339,5 +349,7 @@
       }
     });
   </script>
+
+  <script src="Animation.js"></script>
 </body>
 </html

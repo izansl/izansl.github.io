@@ -44,6 +44,17 @@ body {
   background: #000000;
   overflow: hidden;
   height: 100vh;
+  position: relative; 
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; 
+  pointer-events: none; 
 }
 
 /* ======================
@@ -51,19 +62,22 @@ body {
    ====================== */
 #navbar {
   position: fixed;
-  left: 2rem;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1000;
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* Cambia a horizontal */
   gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  width: auto;
 }
 
 .nav-item {
   position: relative;
   background: #000000;
-  clip-path: polygon(15px 0%, 100% 0%, calc(100% + 5px) calc(100% - 15px), calc(100% - 10px) 100%, 0% 100%, 0% 15px);
+  clip-path: polygon(25px 0%, 100% 0%, calc(100% + 8px) calc(100% - 25px), calc(100% - 17px) 100%, 0% 100%, 0% 25px);
   cursor: pointer;
   transition: all 0.3s ease;
   overflow: visible;
@@ -76,7 +90,7 @@ body {
   position: absolute;
   inset: -2px;
   background: var(--neon-turquese);
-  clip-path: polygon(15px 0%, 100% 0%, calc(100% + 5px) calc(100% - 15px), calc(100% - 10px) 100%, 0% 100%, 0% 15px);
+  clip-path: polygon(25px 0%, 100% 0%, calc(100% + 8px) calc(100% - 25px), calc(100% - 17px) 100%, 0% 100%, 0% 25px);
   z-index: -1;
   transition: all 0.3s ease;
 }
@@ -86,7 +100,7 @@ body {
   position: absolute;
   inset: 0;
   background: #000000;
-  clip-path: polygon(17px 2px, calc(100% - 2px) 2px, calc(100% + 3px) calc(100% - 17px), calc(100% - 12px) calc(100% - 2px), 2px calc(100% - 2px), 2px 17px);
+  clip-path: polygon(27px 2px, calc(100% - 2px) 2px, calc(100% + 6px) calc(100% - 27px), calc(100% - 19px) calc(100% - 2px), 2px calc(100% - 2px), 2px 27px);
   z-index: -1;
 }
 
@@ -105,7 +119,6 @@ body {
 
 .nav-item:hover::before {
   background: var(--neon-yellow);
-  box-shadow: 0 0 15px var(--neon-yellow), 0 0 30px rgba(251,255,0,0.4);
 }
 
 .nav-item:hover span {
@@ -114,22 +127,76 @@ body {
 
 .nav-item.active::before {
   background: var(--neon-yellow);
-  box-shadow: 0 0 20px var(--neon-yellow), 0 0 40px rgba(251,255,0,0.5);
 }
 
 .nav-item.active span {
   color: var(--neon-yellow);
 }
 
+/* === LÍNEAS DE ENCUADRE === */
+.bg-lines {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.bg-line {
+  position: relative;
+  width: 100vw;
+  height: 100px;
+  display: block;
+  left: 0;
+}
+
+.bg-line.top {
+  top: 0;
+}
+
+.bg-line.bottom {
+  bottom: 0;
+  transform: scaleY(-1);
+}
+
+.bg-center-fill {
+  flex: 1;
+  width: 100vw;
+  background: rgba(0,0,0,0.7); /* Color de fondo entre las líneas */
+}
+
+/* Elimina el fondo de .bg-fill para que solo la franja central tenga fondo */
+.bg-fill {
+  fill: transparent;
+}
+
+.bg-stroke {
+  fill: none;
+  stroke: #39ff14;
+  stroke-width: 6;
+  filter: drop-shadow(0 0 12px #39ff14);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 /* ======================
    MAIN CONTAINER
    ====================== */
 #main-container {
-  width: calc(100% - 280px);
+  width: 100%;
   height: 100vh;
   position: relative;
-  margin-left: 280px;
-  padding: 0 4rem;
+  margin-left: 0;
+  padding: 6rem 4rem 0 4rem; /* Espacio arriba para la navbar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ======================
