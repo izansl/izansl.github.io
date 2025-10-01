@@ -25,10 +25,11 @@
   --fondo1: #000000;
   --neon-turquese: #ffffff;
   --neon-green: #39ff14;
-  --neon-yellow: #fbff00;
+  --neon-yellow: #ffe600;
   --neon-red: #ff002b;
   --neon-pink: #ff00c8;
   --texto-principal: #e0e0e0;
+  --line-separation: 1080px;
 }
 
 * {
@@ -62,12 +63,12 @@ canvas {
    ====================== */
 #navbar {
   position: fixed;
-  top: 2rem;
+  top: 3rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
   display: flex;
-  flex-direction: row; /* Cambia a horizontal */
+  flex-direction: row; 
   gap: 1.5rem;
   justify-content: center;
   align-items: center;
@@ -144,42 +145,26 @@ canvas {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  justify-content: space-between;
+  justify-content: flex-start; 
 }
 
-.bg-line {
-  position: relative;
-  width: 100vw;
-  height: 100px;
-  display: block;
+.bg-shape {
+  position: absolute;
+  top: 1.5rem;
   left: 0;
-}
-
-.bg-line.top {
-  top: 0;
-}
-
-.bg-line.bottom {
-  bottom: 0;
-  transform: scaleY(-1);
-}
-
-.bg-center-fill {
-  flex: 1;
   width: 100vw;
-  background: rgba(0,0,0,0.7); /* Color de fondo entre las líneas */
+  height: var(--line-separation); 
+  z-index: -1;
 }
 
-/* Elimina el fondo de .bg-fill para que solo la franja central tenga fondo */
-.bg-fill {
-  fill: transparent;
+.bg-fill-shape {
+  fill: rgba(31, 23, 0, 0.705);
 }
 
 .bg-stroke {
   fill: none;
-  stroke: #39ff14;
-  stroke-width: 6;
-  filter: drop-shadow(0 0 12px #39ff14);
+  stroke: var(--neon-yellow);
+  stroke-width: 1.5;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
@@ -192,7 +177,7 @@ canvas {
   height: 100vh;
   position: relative;
   margin-left: 0;
-  padding: 6rem 4rem 0 4rem; /* Espacio arriba para la navbar */
+  padding: 6rem 4rem 0 4rem; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -240,14 +225,12 @@ canvas {
   font-size: 6rem;
   color: var(--neon-turquese);
   margin-bottom: 2rem;
-  text-shadow: 0 0 20px var(--neon-turquese);
 }
 
 #home p {
   font-family: 'Deltha', sans-serif;
   font-size: 2rem;
-  color: var(--neon-yellow);
-  text-shadow: 0 0 15px var(--neon-yellow);
+  color: var(--neon-turquese);
 }
 
 /* ======================
@@ -333,15 +316,6 @@ canvas {
   z-index: -1;
 }
 
-.cv-descarga:hover {
-  transform: scale(1.05);
-}
-
-.cv-descarga:hover::before {
-  background: var(--neon-yellow);
-  box-shadow: 0 0 15px var(--neon-yellow), 0 0 30px rgba(251,255,0,0.4);
-}
-
 .cv-descarga > * {
   position: relative;
   z-index: 1;
@@ -349,7 +323,7 @@ canvas {
 
 .cv-descarga h3 {
   font-family: 'Deltha', sans-serif;
-  color: var(--neon-turquese);
+  color: var(--neon-yellowGF);
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
@@ -512,10 +486,6 @@ canvas {
   transition: all 0.3s ease;
 }
 
-.proyecto:hover .proyecto-info h3 {
-  color: var(--neon-turquese);
-}
-
 .proyecto-info p {
   font-size: 1.1rem;
   color: var(--texto-principal);
@@ -581,7 +551,7 @@ canvas {
 
 #contacto h2 {
   font-family: 'Deltha', sans-serif;
-  color: var(--neon-yellow);
+  color: var(--neon-turquese);
   font-size: 3rem;
   margin-bottom: 3rem;
 }

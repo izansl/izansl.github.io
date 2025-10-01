@@ -8,14 +8,18 @@
 </head>
 <body>
   <div class="bg-lines">
-    <svg class="bg-line top" viewBox="0 0 1200 100" preserveAspectRatio="none">
-      <rect x="0" y="0" width="1200" height="100" class="bg-fill"/>
+    <svg class="bg-shape" viewBox="0 0 1200 600" preserveAspectRatio="none">
+      <!-- Relleno entre las dos líneas -->
+      <path d="M0,70 
+              L200,70 L400,30 L800,30 L1000,70 L1200,70 
+              L1200,530 L1000,530 L800,570 L400,570 L200,530 L0,530 Z"
+            class="bg-fill-shape"/>
+      
+      <!-- Línea superior -->
       <polyline points="0,70 200,70 400,30 800,30 1000,70 1200,70" class="bg-stroke"/>
-    </svg>
-    <div class="bg-center-fill"></div>
-    <svg class="bg-line bottom" viewBox="0 0 1200 100" preserveAspectRatio="none">
-      <rect x="0" y="0" width="1200" height="100" class="bg-fill"/>
-      <polyline points="0,70 200,70 400,30 800,30 1000,70 1200,70" class="bg-stroke"/>
+      
+      <!-- Línea inferior (misma forma invertida verticalmente) -->
+      <polyline points="0,530 200,530 400,570 800,570 1000,530 1200,530" class="bg-stroke"/>
     </svg>
   </div>
   <!-- Vertical Navigation Bar -->
