@@ -24,11 +24,11 @@
   let st = {
     lim: 50,
     spawn: 0.02,
-    col: "#ffffff",
+    col: "#6ef5da",
     lineMulticolor: false,
     circleMulticolor: false,
     circleMode: "fill",
-    circleColor: "#ffffff",
+    circleColor: "#6ef5da",
     lineGlow: true,
     glowStrength: 12,
     hideCircles: false,
@@ -248,7 +248,7 @@
 
   function CAM(n) {
     x.setTransform(1, 0, 0, 1, 0, 0);
-    x.fillStyle = "#000";
+    x.fillStyle = "#120b21";
     x.fillRect(0, 0, W, H);
 
     let px = Math.sin(n * .0002) * 155,

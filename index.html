@@ -5,21 +5,154 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Izan Sanchez Lozano Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .modal-body {
+      display: flex;
+      gap: 2rem;
+    }
+    .modal-info {
+      flex: 1;
+      max-width: 50%;
+    }
+    .modal-media {
+      flex: 1;
+      max-width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    .modal-media img,
+    .modal-media video,
+    .modal-media iframe {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .modal-media .placeholder {
+      width: 100%;
+      height: 200px;
+      background-color: #f0f0f0;
+      border: 2px dashed #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+      font-style: italic;
+      border-radius: 8px;
+    }
+    .image-carousel {
+      position: relative;
+      width: 100%;
+      margin-top: 1rem;
+    }
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    .carousel-image {
+      width: 100%;
+      height: auto;
+      display: none;
+    }
+    .carousel-image.active {
+      display: block;
+    }
+    .carousel-controls {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+      padding: 0 0.5rem;
+      pointer-events: none;
+    }
+    .carousel-btn {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+      color: var(--neon-turquese);
+      border: 1px solid var(--neon-turquese);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      pointer-events: all;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .carousel-btn:hover:not(:disabled) {
+      background: var(--neon-turquese);
+      color: #000;
+      box-shadow: 0 0 15px var(--neon-turquese);
+    }
+    .carousel-btn:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+    .carousel-indicators {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    .indicator {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .indicator:hover {
+      background: rgba(255, 255, 255, 0.5);
+    }
+    .indicator.active {
+      background: var(--neon-turquese);
+      box-shadow: 0 0 8px var(--neon-turquese);
+    }
+    
+    /* Estilos para las imágenes de preview de proyectos */
+    .proyecto-preview-image {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+      position: relative;
+      clip-path: polygon(15px 0%, 100% 0%, calc(100% + 5px) calc(100% - 15px), calc(100% - 10px) 100%, 0% 100%, 0% 15px);
+    }
+    
+    .proyecto-preview-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .proyecto:hover .proyecto-preview-image img {
+      transform: scale(1.1);
+    }
+
+  </style>
 </head>
 <body>
   <div class="bg-lines">
     <svg class="bg-shape" viewBox="0 0 1200 600" preserveAspectRatio="none">
-      <!-- Relleno entre las dos líneas -->
+      <!-- Relleno desde la línea superior hasta abajo -->
       <path d="M0,70 
               L200,70 L400,30 L800,30 L1000,70 L1200,70 
-              L1200,530 L1000,530 L800,570 L400,570 L200,530 L0,530 Z"
+              L1200,600 L0,600 Z"
             class="bg-fill-shape"/>
       
       <!-- Línea superior -->
       <polyline points="0,70 200,70 400,30 800,30 1000,70 1200,70" class="bg-stroke"/>
-      
-      <!-- Línea inferior (misma forma invertida verticalmente) -->
-      <polyline points="0,530 200,530 400,570 800,570 1000,530 1200,530" class="bg-stroke"/>
     </svg>
   </div>
   <!-- Vertical Navigation Bar -->
@@ -108,21 +241,30 @@
     <section id="proyectos" class="section">
       <div class="section-content">
         <div class="proyecto" data-project="w40k-tlm">
+          <div class="proyecto-preview-image">
+            <img src="Assets/FotosProyectos/W40k_TLM.png" alt="W40K-TLM Preview">
+          </div>
           <div class="proyecto-info">
             <h3>W40K-TLM</h3>
-            <p>Warhammer 40,000 tactical level management experience.</p>
+            <p>Warhammer 40,000 inspired Diablo-like game</p>
           </div>
         </div>
         <div class="proyecto" data-project="asylum-of-creation">
+          <div class="proyecto-preview-image">
+            <img src="Assets/FotosProyectos/Asylum.png" alt="Asylum of Creation Preview">
+          </div>
           <div class="proyecto-info">
             <h3>Asylum of Creation</h3>
-            <p>Dark atmospheric experience blending horror and creativity.</p>
+            <p>7 day Game Jam game</p>
           </div>
         </div>
         <div class="proyecto" data-project="spits-and-crypts">
+          <div class="proyecto-preview-image">
+            <img src="Assets/FotosProyectos/Spit&Crypts.png" alt="Spits & Crypts Preview">
+          </div>
           <div class="proyecto-info">
             <h3>Spits & Crypts</h3>
-            <p>Dungeon-crawling adventure with unique mechanics.</p>
+            <p>2d RPG with turn based combat set in ancient Egypt</p>
           </div>
         </div>
       </div>
@@ -181,6 +323,7 @@
     <section id="contacto" class="section">
       <div class="section-content">
         <h2>Let's Work Together</h2>
+        <p class="contact-description">Interested in collaborating or have questions? Feel free to reach out!</p>
         <div class="contact-icons">
           <a href="mailto:i.sanchezlozanoa@gmail.com">
             <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" width="60">
@@ -192,6 +335,7 @@
             <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="60">
           </a>
         </div>
+        <p class="contact-response-time">I typically respond within 24 hours.</p>
       </div>
     </section>
 
@@ -205,19 +349,26 @@
         <span class="close">&times;</span>
       </div>
       <div class="modal-body">
-        <div class="info-block">
-          <h3>Description</h3>
-          <p id="modal-description">Project description will appear here...</p>
+        <div class="modal-info">
+          <div class="info-block">
+            <h3>Description</h3>
+            <p id="modal-description">Project description will appear here...</p>
+          </div>
+          <div class="info-block">
+            <h3>My Role</h3>
+            <ul id="modal-role">
+              <li>Role details will appear here...</li>
+            </ul>
+          </div>
+          <div class="info-block">
+            <h3>Useful Links</h3>
+            <div id="modal-links"></div>
+          </div>
         </div>
-        <div class="info-block">
-          <h3>My Role</h3>
-          <ul id="modal-role">
-            <li>Role details will appear here...</li>
-          </ul>
-        </div>
-        <div class="info-block">
-          <h3>Useful Links</h3>
-          <div id="modal-links"></div>
+        <div class="modal-media">
+          <div id="modal-images">
+            <div class="placeholder">Images and videos will appear here</div>
+          </div>
         </div>
       </div>
     </div>
@@ -230,46 +381,58 @@
     // ============================================================
     const projectData = {
       'w40k-tlm': {
-        title: 'W40K-TLM',
-        description: 'Escribe aquí la descripción completa del proyecto W40K-TLM. Explica de qué trata el juego, sus mecánicas principales, el universo de Warhammer 40,000, y qué lo hace único.',
+        description: 'Warhammer 40K: The Last Marine was developed as part of the Project 3 course, where the entire class collaborated in departments, simulating the structure and workflow of a AAA game studio. The project was based on a pre-established IP and genre, and it was developed using a custom-built game engine.\n\nAs a part of Design tema, during development, I took on multiple roles. My primary responsibility was designing all enemy characters and the boss, creating their visual design, behaviors, attack patterns, and statistics entirely from scratch, while staying faithful to the established IP. Additionally, I contributed as part of the QA team, thoroughly testing and refining the game to ensure a polished final release.',
         role: [
-          'Rol 1 - Descripción de lo que hiciste',
-          'Rol 2 - Otra contribución al proyecto',
-          'Rol 3 - Más responsabilidades',
-          'Rol 4 - Añade más si es necesario'
+          'Rol 1 - Enemy Design',
+          'Rol 2 - QA Testing & Balancing',
+          'Rol 3 - Audio Design',
         ],
         links: [
-          { text: 'Itch.io Page', url: 'https://tu-url-aqui.com' },
-          { text: 'GitHub Repository', url: 'https://github.com/tu-repo' },
-          { text: 'Gameplay Video', url: 'https://youtube.com/tu-video' }
+          { text: 'GitHub Repository', url: 'https://github.com/Burned-Games/W40K-TLM' },
+          { text: 'Website', url: 'https://burned-games.github.io' }
+        ],
+        media: [
+          { type: 'youtube', src: 'https://www.youtube.com/watch?v=pNp_OPTwnTo', alt: 'W40K-TLM Trailer' },
+          { type: 'image', src: 'Assets/FotosProyectos/W40k_TLM_1.webp', alt: 'W40K-TLM Screenshot 1' },
+          { type: 'image', src: 'Assets/FotosProyectos/W40k_TLM_2.webp', alt: 'W40K-TLM Screenshot 2' },
+          { type: 'image', src: 'Assets/FotosProyectos/W40k_TLM_3.webp', alt: 'W40K-TLM Screenshot 3' }
         ]
       },
       'asylum-of-creation': {
-        title: 'Asylum of Creation',
-        description: 'Escribe aquí la descripción completa del proyecto Asylum of Creation. Describe la atmósfera, el tipo de juego, las mecánicas de horror y creatividad que mencionas.',
+        description: 'The Asylum of Creation was developed in seven days for the 8th Gran CITM Game Jam, where my team and I formed Primate Studio to participate. It is an original IP where players take on the role of one of Dr. Darwin’s test subjects, trapped in his experimental world that grows increasingly oppressive and dangerous through combat and mystery.\n\nGiven the limited time and small team size, I took on multiple responsibilities during development. On the design side, I worked on gameplay mechanics and level design. On the art side, I created all of the environment assets used throughout the levels, as well as the game’s UI.',
         role: [
-          'Rol 1 - Tu contribución principal',
-          'Rol 2 - Otra área en la que trabajaste',
-          'Rol 3 - Más responsabilidades'
+          'Rol 1 - Gameplay & Level Design',
+          'Rol 2 - Environment Artist',
+          'Rol 3 - UI/UX Design'
         ],
         links: [
-          { text: 'Play Demo', url: '#' },
-          { text: 'Development Blog', url: '#' },
-          { text: 'Press Kit', url: '#' }
+          { text: 'Itch.io', url: 'https://paulo-white.itch.io/the-asylum-of-creation' },
+          { text: 'Primate Studio', url: 'https://primate-studio.github.io' }
+        ],
+        media: [
+          { type: 'youtube', src: 'https://www.youtube.com/watch?v=mHzj64I8j7s', alt: 'Asylum of Creation Trailer' },
+          { type: 'image', src: 'Assets/FotosProyectos/Asylum_1.png', alt: 'Asylum of Creation Screenshot 1' },
+          { type: 'image', src: 'Assets/FotosProyectos/Asylum_2.png', alt: 'Asylum of Creation Screenshot 2' },
+          { type: 'image', src: 'Assets/FotosProyectos/Asylum_3.png', alt: 'Asylum of Creation Screenshot 3' }
         ]
       },
       'spits-and-crypts': {
-        title: 'Spits & Crypts',
-        description: 'Escribe aquí la descripción completa del proyecto Spits & Crypts. Explica las mecánicas de dungeon-crawling, qué hace único a este juego, y cualquier elemento narrativo importante.',
+        description: 'Spits & Crypts was developed over the course of four months by a team of 20. Unlike shorter game jam projects, it placed a strong emphasis on narrative. As part of the design team, I contributed to crafting a story that was seamlessly woven into the gameplay.\n\nThroughout development, we iterated extensively, responding to feedback, aligning with team capabilities, and adapting to time constraints. This process resulted in a well-rounded final product, featuring a wide range of gameplay systems, all implemented in SDL.',
         role: [
-          'Rol 1 - Lo que desarrollaste',
-          'Rol 2 - Otra contribución',
-          'Rol 3 - Más detalles de tu trabajo'
+          'Rol 1 - Narrative Design',
+          'Rol 2 - Enemies Design',
+          'Rol 3 - Skilltree Design'
         ],
         links: [
-          { text: 'Game Page', url: '#' },
-          { text: 'Trailer', url: '#' },
-          { text: 'Documentation', url: '#' }
+          { text: 'Itch.io', url: 'https://picky-rats.itch.io/spits-and-crypts' },
+          { text: 'Trailer', url: 'https://youtu.be/U7J9S3JY0Gg' },
+          { text: 'WebSite', url: 'https://pickyrats.github.io/Spits-and-Crypts' }
+        ],
+        media: [
+          { type: 'youtube', src: 'https://youtu.be/U7J9S3JY0Gg', alt: 'Spits & Crypts Trailer' },
+          { type: 'image', src: 'Assets/FotosProyectos/Spit&Crypts_1.png', alt: 'Spits & Crypts Screenshot 1' },
+          { type: 'image', src: 'Assets/FotosProyectos/Spit&Crypts_2.png', alt: 'Spits & Crypts Screenshot 2' },
+          { type: 'image', src: 'Assets/FotosProyectos/Spit&Crypts_3.png', alt: 'Spits & Crypts Screenshot 3' }
         ]
       }
     };
@@ -299,6 +462,7 @@
     const modalDescription = document.getElementById('modal-description');
     const modalRole = document.getElementById('modal-role');
     const modalLinks = document.getElementById('modal-links');
+    const modalImages = document.getElementById('modal-images');
     const closeBtn = document.querySelector('.close');
 
     document.querySelectorAll('.proyecto').forEach(proyecto => {
@@ -308,7 +472,7 @@
         
         if (project) {
           modalTitle.textContent = project.title;
-          modalDescription.textContent = project.description;
+          modalDescription.innerHTML = project.description.replace(/\n\n/g, '<br><br>');
           
           modalRole.innerHTML = '';
           project.role.forEach(roleItem => {
@@ -326,6 +490,141 @@
             a.target = '_blank';
             modalLinks.appendChild(a);
           });
+          
+          // Handle media content
+          modalImages.innerHTML = '';
+          if (project.media && project.media.length > 0) {
+            const videos = project.media.filter(item => item.type === 'youtube' || item.type === 'video');
+            const images = project.media.filter(item => item.type === 'image');
+            
+            // Add videos first
+            videos.forEach(mediaItem => {
+              if (mediaItem.type === 'video') {
+                const video = document.createElement('video');
+                video.src = mediaItem.src;
+                video.controls = true;
+                if (mediaItem.poster) {
+                  video.poster = mediaItem.poster;
+                }
+                modalImages.appendChild(video);
+              } else if (mediaItem.type === 'youtube') {
+                const iframe = document.createElement('iframe');
+                // Convert YouTube URL to embed format
+                let videoId = '';
+                if (mediaItem.src.includes('youtu.be/')) {
+                  videoId = mediaItem.src.split('youtu.be/')[1].split(/[?&]/)[0];
+                } else if (mediaItem.src.includes('youtube.com/watch?v=')) {
+                  videoId = mediaItem.src.split('v=')[1].split('&')[0];
+                }
+                iframe.src = `https://www.youtube.com/embed/${videoId}`;
+                iframe.width = '100%';
+                iframe.height = '250';
+                iframe.frameBorder = '0';
+                iframe.allowFullscreen = true;
+                iframe.title = mediaItem.alt || 'YouTube video';
+                modalImages.appendChild(iframe);
+              }
+            });
+            
+            // Add image carousel if there are images
+            if (images.length > 0) {
+              const carousel = document.createElement('div');
+              carousel.className = 'image-carousel';
+              
+              const carouselContainer = document.createElement('div');
+              carouselContainer.className = 'carousel-container';
+              
+              // Add images
+              images.forEach((mediaItem, index) => {
+                const img = document.createElement('img');
+                img.src = mediaItem.src;
+                img.alt = mediaItem.alt || 'Project image';
+                img.className = 'carousel-image';
+                if (index === 0) img.classList.add('active');
+                carouselContainer.appendChild(img);
+              });
+              
+              carousel.appendChild(carouselContainer);
+              
+              // Add controls if more than one image
+              if (images.length > 1) {
+                const controls = document.createElement('div');
+                controls.className = 'carousel-controls';
+                
+                const prevBtn = document.createElement('button');
+                prevBtn.className = 'carousel-btn';
+                prevBtn.textContent = '‹';
+                prevBtn.setAttribute('aria-label', 'Previous image');
+                
+                const nextBtn = document.createElement('button');
+                nextBtn.className = 'carousel-btn';
+                nextBtn.textContent = '›';
+                nextBtn.setAttribute('aria-label', 'Next image');
+                
+                controls.appendChild(prevBtn);
+                controls.appendChild(nextBtn);
+                carousel.appendChild(controls);
+                
+                // Add indicators
+                const indicators = document.createElement('div');
+                indicators.className = 'carousel-indicators';
+                
+                images.forEach((_, index) => {
+                  const indicator = document.createElement('div');
+                  indicator.className = 'indicator';
+                  if (index === 0) indicator.classList.add('active');
+                  indicators.appendChild(indicator);
+                });
+                carousel.appendChild(indicators);
+                
+                // Carousel functionality
+                let currentImageIndex = 0;
+                
+                const showImage = (index) => {
+                  carouselContainer.querySelectorAll('.carousel-image').forEach((img, i) => {
+                    img.classList.toggle('active', i === index);
+                  });
+                  indicators.querySelectorAll('.indicator').forEach((ind, i) => {
+                    ind.classList.toggle('active', i === index);
+                  });
+                  prevBtn.disabled = index === 0;
+                  nextBtn.disabled = index === images.length - 1;
+                };
+                
+                prevBtn.addEventListener('click', () => {
+                  if (currentImageIndex > 0) {
+                    currentImageIndex--;
+                    showImage(currentImageIndex);
+                  }
+                });
+                
+                nextBtn.addEventListener('click', () => {
+                  if (currentImageIndex < images.length - 1) {
+                    currentImageIndex++;
+                    showImage(currentImageIndex);
+                  }
+                });
+                
+                indicators.querySelectorAll('.indicator').forEach((indicator, index) => {
+                  indicator.addEventListener('click', () => {
+                    currentImageIndex = index;
+                    showImage(currentImageIndex);
+                  });
+                });
+                
+                // Initialize
+                showImage(0);
+              }
+              
+              modalImages.appendChild(carousel);
+            }
+          } else {
+            // Show placeholder if no media
+            const placeholder = document.createElement('div');
+            placeholder.className = 'placeholder';
+            placeholder.textContent = 'Images and videos will appear here';
+            modalImages.appendChild(placeholder);
+          }
           
           modal.style.display = 'block';
           setTimeout(() => {
