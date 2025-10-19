@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Izan Sanchez Lozano Portfolio</title>  <link rel="stylesheet" href="style.css">
+  <title>IzanSanchezLozano_Portfolio</title>  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="bg-lines">
@@ -103,7 +103,13 @@
     <!-- PROJECTS SECTION -->
     <section id="proyectos" class="section">
       <div class="section-content">
-        <div class="proyecto" data-project="w40k-tlm">
+        <!-- Controles del carrusel -->
+        <div class="proyectos-carousel-controls">
+          <button class="proyectos-carousel-btn prev" aria-label="Proyecto anterior">‹</button>
+          <button class="proyectos-carousel-btn next" aria-label="Proyecto siguiente">›</button>
+        </div>
+        
+        <div class="proyecto active" data-project="w40k-tlm">
           <div class="proyecto-preview-image">
             <img src="Assets/FotosProyectos/W40k_TLM.png" alt="W40K-TLM Preview">
           </div>
@@ -129,6 +135,13 @@
             <h3>Spits & Crypts</h3>
             <p>2d RPG with turn based combat set in ancient Egypt</p>
           </div>
+        </div>
+        
+        <!-- Indicadores del carrusel -->
+        <div class="proyectos-carousel-indicators">
+          <div class="proyectos-indicator active" data-index="0"></div>
+          <div class="proyectos-indicator" data-index="1"></div>
+          <div class="proyectos-indicator" data-index="2"></div>
         </div>
       </div>
     </section>
@@ -520,6 +533,89 @@
         }, 300);
       }
     });
+
+    // ============================================================
+    // PROJECTS CAROUSEL FOR MOBILE
+    // ============================================================
+    const proyectos = document.querySelectorAll('.proyecto');
+    const prevBtn = document.querySelector('.proyectos-carousel-btn.prev');
+    const nextBtn = document.querySelector('.proyectos-carousel-btn.next');
+    const indicators = document.querySelectorAll('.proyectos-indicator');
+    let currentProjectIndex = 0;
+
+    function showProject(index) {
+      // Ocultar todos los proyectos
+      proyectos.forEach((proyecto, i) => {
+        proyecto.classList.toggle('active', i === index);
+      });
+      
+      // Actualizar indicadores
+      indicators.forEach((indicator, i) => {
+        indicator.classList.toggle('active', i === index);
+      });
+      
+      // Actualizar estado de botones
+      prevBtn.disabled = index === 0;
+      nextBtn.disabled = index === proyectos.length - 1;
+    }
+
+    // Botón anterior
+    prevBtn.addEventListener('click', () => {
+      if (currentProjectIndex > 0) {
+        currentProjectIndex--;
+        showProject(currentProjectIndex);
+      }
+    });
+
+    // Botón siguiente
+    nextBtn.addEventListener('click', () => {
+      if (currentProjectIndex < proyectos.length - 1) {
+        currentProjectIndex++;
+        showProject(currentProjectIndex);
+      }
+    });
+
+    // Click en indicadores
+    indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => {
+        currentProjectIndex = index;
+        showProject(currentProjectIndex);
+      });
+    });
+
+    // Soporte para gestos táctiles (swipe)
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const proyectosSection = document.getElementById('proyectos');
+
+    proyectosSection.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+
+    proyectosSection.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    });
+
+    function handleSwipe() {
+      const swipeThreshold = 50;
+      const diff = touchStartX - touchEndX;
+      
+      if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0 && currentProjectIndex < proyectos.length - 1) {
+          // Swipe izquierda - siguiente proyecto
+          currentProjectIndex++;
+          showProject(currentProjectIndex);
+        } else if (diff < 0 && currentProjectIndex > 0) {
+          // Swipe derecha - proyecto anterior
+          currentProjectIndex--;
+          showProject(currentProjectIndex);
+        }
+      }
+    }
+
+    // Inicializar
+    showProject(0);
   </script>
 
   <script src="Animation.js"></script>
