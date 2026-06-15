@@ -212,7 +212,15 @@ function closeProjectModal() {
 function fillModal(item) {
   document.getElementById("modalMeta").textContent = `${item.category} — ${item.year}`;
   document.getElementById("modalTitle").textContent = item.name;
-  document.getElementById("modalDescription").textContent = item.description;
+
+  const descKeys = Object.keys(item)
+    .filter((key) => /^description(_\d+)?$/.test(key))
+    .sort();
+
+  const descContainer = document.getElementById("modalDescription");
+  descContainer.innerHTML = descKeys
+    .map((key) => `<p>${item[key]}</p>`)
+    .join("");
 
   const roles = document.getElementById("modalRoles");
   roles.innerHTML = item.roles.map((role) => `<li>${role}</li>`).join("");
@@ -319,9 +327,12 @@ function renderTools(tools) {
     const card = document.createElement("div");
     card.className = "tool-card";
     card.innerHTML = `
-      <span class="tool-card__index">${String(index + 1).padStart(2, "0")}</span>
+      <div class="tool-card__top">
+        <span class="tool-card__index">${String(index + 1).padStart(2, "0")}</span>
+        ${tool.icon ? `<span class="tool-card__icon"><img src="${tool.icon}" alt="" loading="lazy" /></span>` : ""}
+      </div>
       <span class="tool-card__name">${tool.name}</span>
-      <span class="tool-card__role">${tool.role}</span>
+      ${tool.role ? `<span class="tool-card__role">${tool.role}</span>` : ""}
     `;
     grid.appendChild(card);
   });
@@ -355,7 +366,10 @@ function renderContact(contact) {
     .map(
       (social) => `
       <li>
-        <a href="${social.url}" target="_blank" rel="noopener noreferrer">${social.name}</a>
+        <a href="${social.url}" target="_blank" rel="noopener noreferrer">
+          ${social.icon ? `<span class="contact__social-icon"><img src="${social.icon}" alt="" loading="lazy" /></span>` : ""}
+          <span>${social.name}</span>
+        </a>
       </li>`
     )
     .join("");

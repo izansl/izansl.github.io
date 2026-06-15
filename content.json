@@ -1,7 +1,7 @@
 {
   "es": {
     "meta": {
-      "title": "Alex Rivera — Desarrollador Frontend",
+      "title": "Izan Sanchez — Portfolio",
       "langLabel": "EN"
     },
     "nav": {
@@ -16,19 +16,17 @@
     },
     "hero": {
       "eyebrow": "Portfolio — 2026",
-      "name1": "ALEX",
-      "name2": "RIVERA",
-      "role": "Desarrollador Frontend",
-      "tagline": "Construyo interfaces rápidas, accesibles y con un punto justo de actitud. Mezclo código limpio con detalles que se notan.",
+      "name1": "IZAN",
+      "name2": "SANCHEZ",
+      "role": "Game & Narrative Designer",
       "status": "Disponible para proyectos",
       "location": "Barcelona, España",
-      "year": "Ed. 03 / 2026",
       "scroll": "Desplázate"
     },
     "projects": {
       "eyebrow": "02 — proyectos",
       "title": "Trabajos seleccionados",
-      "subtitle": "Una muestra de proyectos recientes, de marca a producto. Abre cada módulo para ver el detalle.",
+      "subtitle": "Una muestra de proyectos recientes.",
       "labels": {
         "open": "Abrir",
         "description": "Descripción",
@@ -41,166 +39,74 @@
       "items": [
         {
           "id": "01",
-          "name": "Nimbus Studio",
-          "category": "Identidad + Web",
+          "name": "The Asylum of Creation",
+          "category": "GameJam",
           "year": "2025",
-          "description": "Sitio web y sistema visual para un estudio de animación, con tipografía cinética y transiciones a medida. El objetivo era transmitir movimiento incluso en las páginas estáticas, así que gran parte del trabajo se centró en microinteracciones y en un sistema de easing coherente en toda la web.",
-          "tags": ["Branding", "Webflow", "Motion"],
-          "roles": ["Diseño UI", "Desarrollo Frontend", "Animación"],
+          "description_1": "The Asylum of Creation fue el primer proyecto que desarrollamos fuera del ámbito académico. Creado por un equipo de 5 personas para la 8ª edición de la Gran FITM Game Jam, se trata de una IP original donde el jugador asume el papel de uno de los conejillos de indias del Dr. Darwin. El protagonista se encuentra atrapado en un entorno que, a medida que avanza, se vuelve cada vez más opresivo y peligroso.",
+          "description_2": "Dado que el tema principal de la Jam era el bucle, decidimos enfocar el diseño hacia el género roguelike. El juego cuenta con generación procedimental, por lo que los escenarios, la posición de los enemigos, los objetos narrativos y los power-ups son completamente aleatorios en cada partida.",
+          "description_3": "La mecánica más interesante del proyecto es su sistema de progresión tras la derrota: con cada muerte del jugador, el escenario cambia y se vuelve más lúgubre y agresivo. Esta transformación del entorno sirve para representar el deterioro de la salud mental del personaje, integrando así uno de los temas secundarios propuestos en la Jam.",
+          "roles": ["Diseño Narrativo y Gameplay", "Creación de todos los assets del entorno"],
           "links": [
-            { "label": "Ver sitio web", "url": "#" },
-            { "label": "Case study", "url": "#" }
+            { "label": "Itch.io", "url": "https://paulo-white.itch.io/the-asylum-of-creation" },
+            { "label": "Trailer", "url": "https://www.youtube.com/watch?v=mHzj64I8j7s" }
           ],
           "media": [
-            { "type": "image", "src": "https://picsum.photos/seed/nimbus-1/1000/1250", "alt": "Pantalla principal de Nimbus Studio" },
-            { "type": "image", "src": "https://picsum.photos/seed/nimbus-2/1000/1250", "alt": "Detalle de tipografía cinética" },
-            { "type": "image", "src": "https://picsum.photos/seed/nimbus-3/1000/1250", "alt": "Vista móvil del proyecto" }
+            { "type": "image", "src": "../Assets/FotosProyectos/Asylum.png", "alt": "Pantalla principal" },
+            { "type": "image", "src": "../Assets/FotosProyectos/Asylum_1.png", "alt": "ScreenShot 1" },
+            { "type": "image", "src": "../Assets/FotosProyectos/Asylum_2.png", "alt": "ScreenShot 2" },
+            { "type": "image", "src": "../Assets/FotosProyectos/Asylum_3.png", "alt": "ScreenShot 3" }
           ]
         },
         {
           "id": "02",
-          "name": "Fintrack",
-          "category": "Producto / SaaS",
-          "year": "2024",
-          "description": "Panel financiero centrado en datos en tiempo real, con foco en rendimiento y accesibilidad. Diseñé y construí el sistema de componentes desde cero, priorizando la legibilidad de los datos y tiempos de carga por debajo de un segundo incluso con miles de filas.",
-          "tags": ["React", "Dashboards", "UX"],
-          "roles": ["Desarrollo Frontend", "Sistema de diseño", "Optimización de rendimiento"],
+          "name": "Warhammer 40K: The Last Marine",
+          "category": "Projecto",
+          "year": "2025",
+          "description_1": "Warhammer 40K: The Last Marine se desarrolló como parte de la asignatura Project 3, donde toda la clase colaboró dividida en departamentos para simular la estructura y el flujo de trabajo de un estudio de desarrollo AAA. El proyecto partió de una propiedad intelectual y un género preestablecidos, y se llevó a cabo utilizando un motor de juego propio.",
+          "description_2": "Como miembro del equipo de Diseño, asumí múltiples roles durante el desarrollo. Mi responsabilidad principal fue el diseño íntegro de todos los enemigos y del jefe final. Esto abarcó la creación desde cero de su concepto visual, comportamiento, patrones de ataque y estadísticas, asegurándome en todo momento de mantener una fidelidad absoluta a la IP original. Además, colaboré de forma activa con el equipo de QA, realizando pruebas exhaustivas y refinando las mecánicas para garantizar que la versión final del juego estuviera lo más pulida posible.",
+          "roles": ["Diseño de Enemigos", "QA & Balance", "Diseño de Audio"],
           "links": [
-            { "label": "Ver producto", "url": "#" },
-            { "label": "Repositorio", "url": "#" }
+            { "label": "Website", "url": "https://burned-games.github.io" },
+            { "label": "Repositorio", "url": "https://github.com/Burned-Games/W40K-TLM" },
+            { "label": "Trailer", "url": "https://www.youtube.com/watch?v=pNp_OPTwnTo" }
           ],
           "media": [
-            { "type": "image", "src": "https://picsum.photos/seed/fintrack-1/1000/1250", "alt": "Dashboard principal de Fintrack" },
-            { "type": "image", "src": "https://picsum.photos/seed/fintrack-2/1000/1250", "alt": "Gráficas en tiempo real" },
-            { "type": "image", "src": "https://picsum.photos/seed/fintrack-3/1000/1250", "alt": "Tema oscuro de la aplicación" }
+            { "type": "image", "src": "../Assets/FotosProyectos/W40k_TLM.png", "alt": "Pantalla principal" },
+            { "type": "image", "src": "../Assets/FotosProyectos/W40k_TLM_1.webp", "alt": "ScreenShot 1" },
+            { "type": "image", "src": "../Assets/FotosProyectos/W40k_TLM_2.webp", "alt": "ScreenShot 2" },
+            { "type": "image", "src": "../Assets/FotosProyectos/W40k_TLM_3.webp", "alt": "ScreenShot 3" }
           ]
         },
         {
           "id": "03",
-          "name": "Estudio Lumen",
-          "category": "Portfolio fotográfico",
-          "year": "2024",
-          "description": "Portfolio minimalista para un colectivo de fotografía, optimizado para imágenes pesadas. Implementé carga progresiva, galerías a pantalla completa y un CMS headless para que el equipo pudiera actualizar el contenido sin tocar código.",
-          "tags": ["Astro", "CMS", "Performance"],
-          "roles": ["Desarrollo Frontend", "Diseño UI", "Integración de CMS"],
+          "name": "El Imperio de Aevora",
+          "category": "Proyecto personal",
+          "year": "2025",
+          "description_1": "El Imperio de Aevora es un proyecto de worldbuilding que reimagina la historia mediante una línea temporal alternativa: un golpe de estado en 1868 derroca a la monarquía británica y da origen a un imperio steampunk gobernado bajo los principios de eficiencia industrial, jerarquía absoluta y obediencia. El proyecto desarrolla en profundidad la cosmología de este universo, desde su origen y fundación hasta la estructura social, política, militar y económica que lo sostiene, articulado a través de las Doce Casas fundadoras y el Aevar, un recurso energético ficticio que se convierte en el eje narrativo y tecnológico de todo el imperio.",
+          "description_2": "El sitio combina narrativa, lore y diseño web para construir una experiencia inmersiva: incluye relatos históricos, perfiles de personajes, diagramas de jerarquía social y descripciones detalladas de tecnología, ejército y vida cotidiana, todo ilustrado con arte visual generado mediante inteligencia artificial. Más allá del contenido narrativo, el proyecto demuestra habilidades de estructuración de información compleja, diseño de interfaz web y desarrollo de un universo ficticio coherente y autoconsistente, pensado como base para futuros proyectos creativos.",
+          "roles": ["Diseño completo de mundo y personajes", "Diseño web"],
           "links": [
-            { "label": "Ver sitio web", "url": "#" }
+            { "label": "Website", "url": "https://izansl.github.io/aevora.github.io/" }
           ],
           "media": [
-            { "type": "image", "src": "https://picsum.photos/seed/lumen-1/1000/1250", "alt": "Galería principal de Estudio Lumen" },
-            { "type": "image", "src": "https://picsum.photos/seed/lumen-2/1000/1250", "alt": "Vista de proyecto individual" },
-            { "type": "image", "src": "https://picsum.photos/seed/lumen-3/1000/1250", "alt": "Página de contacto" },
-            { "type": "image", "src": "https://picsum.photos/seed/lumen-4/1000/1250", "alt": "Versión móvil de la galería" }
-          ]
-        },
-        {
-          "id": "04",
-          "name": "Kioko App",
-          "category": "Producto móvil",
-          "year": "2023",
-          "description": "App de hábitos con microinteracciones cuidadas y un sistema de componentes propio. Trabajé junto al equipo de producto para definir el flujo de onboarding y diseñé las animaciones de recompensa que aparecen al completar un hábito.",
-          "tags": ["React Native", "UI Kit", "Prototipo"],
-          "roles": ["Diseño de producto", "Prototipado", "Sistema de componentes"],
-          "links": [
-            { "label": "App Store", "url": "#" },
-            { "label": "Prototipo Figma", "url": "#" }
-          ],
-          "media": [
-            { "type": "image", "src": "https://picsum.photos/seed/kioko-1/1000/1250", "alt": "Pantalla de onboarding de Kioko" },
-            { "type": "image", "src": "https://picsum.photos/seed/kioko-2/1000/1250", "alt": "Pantalla de hábitos diarios" },
-            { "type": "image", "src": "https://picsum.photos/seed/kioko-3/1000/1250", "alt": "Animación de recompensa" }
-          ]
-        },
-        {
-          "id": "05",
-          "name": "Verbatim Coffee",
-          "category": "Branding + E-commerce",
-          "year": "2023",
-          "description": "Identidad de marca y tienda online para una cafetería de especialidad con varios locales. Diseñé el sistema tipográfico, el empaquetado y una tienda online ligera pensada para pedidos rápidos desde el móvil.",
-          "tags": ["Shopify", "Branding", "E-commerce"],
-          "roles": ["Dirección de arte", "Desarrollo Frontend", "Diseño de packaging"],
-          "links": [
-            { "label": "Ver tienda", "url": "#" },
-            { "label": "Brand book", "url": "#" }
-          ],
-          "media": [
-            { "type": "image", "src": "https://picsum.photos/seed/verbatim-1/1000/1250", "alt": "Identidad de marca de Verbatim Coffee" },
-            { "type": "image", "src": "https://picsum.photos/seed/verbatim-2/1000/1250", "alt": "Tienda online de Verbatim Coffee" },
-            { "type": "image", "src": "https://picsum.photos/seed/verbatim-3/1000/1250", "alt": "Packaging de los productos" }
-          ]
-        },
-        {
-          "id": "06",
-          "name": "Solis Energy",
-          "category": "Producto / Dashboard",
-          "year": "2023",
-          "description": "Panel de monitorización para instalaciones de energía solar, pensado para técnicos en campo. Construí visualizaciones de datos en tiempo real y un modo offline que sincroniza los registros cuando vuelve la conexión.",
-          "tags": ["Vue", "Data viz", "PWA"],
-          "roles": ["Desarrollo Frontend", "Visualización de datos", "Arquitectura PWA"],
-          "links": [
-            { "label": "Ver producto", "url": "#" },
-            { "label": "Documentación", "url": "#" }
-          ],
-          "media": [
-            { "type": "image", "src": "https://picsum.photos/seed/solis-1/1000/1250", "alt": "Panel principal de Solis Energy" },
-            { "type": "image", "src": "https://picsum.photos/seed/solis-2/1000/1250", "alt": "Vista de detalle de una instalación" },
-            { "type": "image", "src": "https://picsum.photos/seed/solis-3/1000/1250", "alt": "Modo offline en dispositivo móvil" }
-          ]
-        },
-        {
-          "id": "07",
-          "name": "Marea Festival",
-          "category": "Web de evento",
-          "year": "2022",
-          "description": "Web del festival de música Marea, con line-up interactivo, venta de entradas y un modo en vivo para el día del evento. El sitio recibió más de 200.000 visitas durante la semana de lanzamiento sin caídas.",
-          "tags": ["Next.js", "Animación", "Ticketing"],
-          "roles": ["Desarrollo Frontend", "Animación", "Optimización de rendimiento"],
-          "links": [
-            { "label": "Ver sitio web", "url": "#" }
-          ],
-          "media": [
-            { "type": "image", "src": "https://picsum.photos/seed/marea-1/1000/1250", "alt": "Portada del festival Marea" },
-            { "type": "image", "src": "https://picsum.photos/seed/marea-2/1000/1250", "alt": "Line-up interactivo" },
-            { "type": "image", "src": "https://picsum.photos/seed/marea-3/1000/1250", "alt": "Página de venta de entradas" },
-            { "type": "image", "src": "https://picsum.photos/seed/marea-4/1000/1250", "alt": "Versión móvil del sitio" }
-          ]
-        },
-        {
-          "id": "08",
-          "name": "Pulse Fitness",
-          "category": "App móvil",
-          "year": "2022",
-          "description": "App de entrenamiento personal con planes adaptativos y seguimiento de progreso. Diseñé el sistema de gráficas de progreso y construí la librería de animaciones compartida entre iOS y Android.",
-          "tags": ["Flutter", "UI Kit", "Animación"],
-          "roles": ["Diseño UI", "Desarrollo Frontend", "Sistema de animación"],
-          "links": [
-            { "label": "App Store", "url": "#" },
-            { "label": "Google Play", "url": "#" }
-          ],
-          "media": [
-            { "type": "image", "src": "https://picsum.photos/seed/pulse-1/1000/1250", "alt": "Pantalla principal de Pulse Fitness" },
-            { "type": "image", "src": "https://picsum.photos/seed/pulse-2/1000/1250", "alt": "Gráficas de progreso" },
-            { "type": "image", "src": "https://picsum.photos/seed/pulse-3/1000/1250", "alt": "Plan de entrenamiento adaptativo" }
+            { "type": "image", "src": "../Assets/FotosProyectos/Aevora.jpg", "alt": "ScreenShot 1" },
+            { "type": "image", "src": "../Assets/FotosProyectos/Aevora_1.jpg", "alt": "ScreenShot 2" },
+            { "type": "image", "src": "../Assets/FotosProyectos/Aevora_2.png", "alt": "ScreenShot 3" }
           ]
         }
       ]
     },
     "skills": {
       "eyebrow": "03 — habilidades",
-      "title": "Lo que sé hacer",
-      "subtitle": "Del diseño a la implementación, sin perder detalle por el camino.",
+      "title": "Habilidades",
       "groups": [
         {
-          "name": "Frontend",
+          "name": "Habilidades técnicas",
           "items": ["HTML5", "CSS / Sass", "JavaScript", "TypeScript", "React", "Next.js"]
         },
         {
-          "name": "Diseño",
+          "name": "Habilidades  de trabajo",
           "items": ["UI Design", "Prototipado", "Sistemas de diseño", "Animación", "Accesibilidad"]
-        },
-        {
-          "name": "Backend",
-          "items": ["Node.js", "APIs REST", "Bases de datos", "GraphQL"]
         }
       ]
     },
@@ -209,46 +115,47 @@
       "title": "Mi caja de herramientas",
       "subtitle": "El software con el que trabajo cada día.",
       "items": [
-        { "name": "Figma", "role": "Diseño UI" },
-        { "name": "VS Code", "role": "Editor de código" },
-        { "name": "Git & GitHub", "role": "Control de versiones" },
-        { "name": "Webflow", "role": "No-code" },
-        { "name": "Framer", "role": "Prototipado" },
-        { "name": "Notion", "role": "Organización" }
+        { "name": "Blender", "icon": "../Assets/Logos/BlenderLogo.png" },
+        { "name": "Figma", "icon": "../Assets/Logos/FigmaLogo.png" },
+        { "name": "Clip Studio Paint", "icon": "../Assets/Logos/ClipStudioPaintLogo.png" },
+        { "name": "Houdini", "icon": "../Assets/Logos/HoudiniLogo.png" },
+        { "name": "Photoshop", "icon": "../Assets/Logos/PhotoshopLogo.png" },
+        { "name": "Unity", "icon": "../Assets/Logos/UnityLogo.png" },
+        { "name": "Unreal Engine", "icon": "../Assets/Logos/UnrealLogo.png" },
+        { "name": "Zbrush", "icon": "../Assets/Logos/ZrbsuhLogo.png" },
+        { "name": "GitHub", "icon": "../Assets/Logos/GithubLogo.png" },
+        { "name": "Marmoset Toolbag", "icon": "../Assets/Logos/MarmosetLogo.png" }
       ]
     },
     "about": {
       "eyebrow": "05 — sobre mí",
-      "title": "Hola, soy Alex",
+      "title": "Hola, soy Izan",
       "paragraphs": [
-        "Soy desarrollador frontend con más de cinco años de experiencia construyendo productos digitales para estudios, startups y marcas independientes.",
-        "Me obsesiona el detalle: la animación que se siente bien, el espaciado que respira y el código que es fácil de mantener. Trabajo de cerca con diseñadores para llevar las ideas a producción sin perder la esencia."
+        "Soy un desarrollador y diseñador de videojuegos a punto de graduarme en el CITM (UPC), impulsado por una vocación que nació en la infancia. Me especializo en Game Design, con un fuerte enfoque en el diseño narrativo y las mecánicas de juego. Mi objetivo principal es crear experiencias que dejen una huella emocional duradera en los jugadores.",
+        "Además, aporto valor técnico y versatilidad a los equipos de desarrollo gracias a mis conocimientos complementarios en modelado 3D. Busco seguir creciendo y combinar mi creatividad con la técnica para dar vida a títulos que conecten de verdad con la audiencia."
       ],
       "stats": [
-        { "value": "5+", "label": "Años de experiencia" },
-        { "value": "32", "label": "Proyectos terminados" },
-        { "value": "12", "label": "Clientes felices" }
+        { "value": "5", "label": "Proyectos terminados" },
+        { "value": "2", "label": "Proyectos en desarrollo" }
       ]
     },
     "contact": {
       "eyebrow": "06 — contacto",
-      "title": "Hablemos",
-      "description": "¿Tienes un proyecto en mente? Escríbeme y lo hablamos con calma.",
-      "cta": "Escríbeme",
-      "email": "hola@alexrivera.dev",
+      "title": "Trabjemos juntos",
+      "description": "Interesado en colaborar o tienes alguna pregunta. Sientete libre de escribirme.",
+      "cta": "Suelo contestar normalemnte en menos de 24h.",
+      "email": "i.sanchezlozanoa@gmail.com",
       "socials": [
-        { "name": "GitHub", "url": "#" },
-        { "name": "LinkedIn", "url": "#" },
-        { "name": "Instagram", "url": "#" },
-        { "name": "Dribbble", "url": "#" }
+        { "name": "LinkedIn", "url": "https://www.linkedin.com/in/izan-sánchez-lozano/", "icon": "../Assets/Logos/LinkedInLogo.png" },
+        { "name": "Artsation", "url": "https://www.artstation.com/erkabessa", "icon": "../Assets/Logos/ArtstationLogo.png" }
       ],
-      "footer": "Diseñado y construido por Alex Rivera.",
+      "footer": "Diseñado y construido por Izan Sánchez Lozano.",
       "back": "Volver arriba"
     }
   },
   "en": {
     "meta": {
-      "title": "Alex Rivera — Frontend Developer",
+      "title": "Izan Sanchez — Portfolio",
       "langLabel": "ES"
     },
     "nav": {
@@ -263,19 +170,17 @@
     },
     "hero": {
       "eyebrow": "Portfolio — 2026",
-      "name1": "ALEX",
-      "name2": "RIVERA",
-      "role": "Frontend Developer",
-      "tagline": "I build interfaces that are fast, accessible, and just opinionated enough. Clean code meets details that actually matter.",
+      "name1": "IZAN",
+      "name2": "SANCHEZ",
+      "role": "Game & Narrative Designer",
       "status": "Available for projects",
       "location": "Barcelona, Spain",
-      "year": "Ed. 03 / 2026",
       "scroll": "Scroll"
     },
     "projects": {
       "eyebrow": "02 — projects",
       "title": "Selected work",
-      "subtitle": "A snapshot of recent projects, from branding to product. Open each module to see the details.",
+      "subtitle": "A snapshot of recent projects.",
       "labels": {
         "open": "Open",
         "description": "Description",
@@ -288,166 +193,74 @@
       "items": [
         {
           "id": "01",
-          "name": "Nimbus Studio",
-          "category": "Identity + Web",
+          "name": "The Asylum of Creation",
+          "category": "Game Jam",
           "year": "2025",
-          "description": "Website and visual system for an animation studio, with kinetic type and custom transitions. The goal was to convey motion even on static pages, so most of the work focused on micro-interactions and a consistent easing system across the site.",
-          "tags": ["Branding", "Webflow", "Motion"],
-          "roles": ["UI Design", "Frontend Development", "Animation"],
+          "description_1": "The Asylum of Creation was the first project we developed outside of an academic setting. Made by a team of 5 people for the 8th edition of the Gran FITM Game Jam, it's an original IP in which the player takes on the role of one of Dr. Darwin's test subjects. The protagonist is trapped in an environment that grows more oppressive and dangerous as the game progresses.",
+          "description_2": "Since the Jam's main theme was \"loop\", we decided to steer the design towards the roguelike genre. The game features procedural generation, so the layouts, enemy placement, narrative objects and power-ups are completely randomised on every run.",
+          "description_3": "The most interesting mechanic in the project is its post-death progression system: every time the player dies, the environment changes and becomes gloomier and more aggressive. This transformation of the environment represents the deterioration of the character's mental health, tying into one of the secondary themes proposed by the Jam.",
+          "roles": ["Narrative & Gameplay Design", "Creation of all environment assets"],
           "links": [
-            { "label": "View website", "url": "#" },
-            { "label": "Case study", "url": "#" }
+            { "label": "Itch.io", "url": "https://paulo-white.itch.io/the-asylum-of-creation" },
+            { "label": "Trailer", "url": "https://www.youtube.com/watch?v=mHzj64I8j7s" }
           ],
           "media": [
-            { "type": "image", "src": "https://picsum.photos/seed/nimbus-1/1000/1250", "alt": "Nimbus Studio homepage" },
-            { "type": "image", "src": "https://picsum.photos/seed/nimbus-2/1000/1250", "alt": "Kinetic type detail" },
-            { "type": "image", "src": "https://picsum.photos/seed/nimbus-3/1000/1250", "alt": "Mobile view of the project" }
+            { "type": "image", "src": "../Assets/FotosProyectos/Asylum.png", "alt": "Main screen" },
+            { "type": "image", "src": "../Assets/FotosProyectos/Asylum_1.png", "alt": "Screenshot 1" },
+            { "type": "image", "src": "../Assets/FotosProyectos/Asylum_2.png", "alt": "Screenshot 2" },
+            { "type": "image", "src": "../Assets/FotosProyectos/Asylum_3.png", "alt": "Screenshot 3" }
           ]
         },
         {
           "id": "02",
-          "name": "Fintrack",
-          "category": "Product / SaaS",
-          "year": "2024",
-          "description": "Financial dashboard built around real-time data, with a focus on performance and accessibility. I designed and built the component system from scratch, prioritising data readability and sub-second load times even with thousands of rows.",
-          "tags": ["React", "Dashboards", "UX"],
-          "roles": ["Frontend Development", "Design System", "Performance Optimisation"],
+          "name": "Warhammer 40K: The Last Marine",
+          "category": "Project",
+          "year": "2025",
+          "description_1": "Warhammer 40K: The Last Marine was developed as part of the Project 3 course, where the whole class collaborated split into departments to simulate the structure and workflow of a AAA development studio. The project started from a pre-established IP and genre, and was built using an in-house game engine.",
+          "description_2": "As a member of the Design team, I took on multiple roles during development. My main responsibility was the full design of all enemies and the final boss. This covered creating their visual concept, behaviour, attack patterns and stats from scratch, while always keeping absolute fidelity to the original IP. I also worked closely with the QA team, running thorough testing and refining mechanics to make sure the final version of the game was as polished as possible.",
+          "roles": ["Enemy Design", "QA & Balance", "Audio Design"],
           "links": [
-            { "label": "View product", "url": "#" },
-            { "label": "Repository", "url": "#" }
+            { "label": "Website", "url": "https://burned-games.github.io" },
+            { "label": "Repository", "url": "https://github.com/Burned-Games/W40K-TLM" },
+            { "label": "Trailer", "url": "https://www.youtube.com/watch?v=pNp_OPTwnTo" }
           ],
           "media": [
-            { "type": "image", "src": "https://picsum.photos/seed/fintrack-1/1000/1250", "alt": "Fintrack main dashboard" },
-            { "type": "image", "src": "https://picsum.photos/seed/fintrack-2/1000/1250", "alt": "Real-time charts" },
-            { "type": "image", "src": "https://picsum.photos/seed/fintrack-3/1000/1250", "alt": "Dark theme of the app" }
+            { "type": "image", "src": "../Assets/FotosProyectos/W40k_TLM.png", "alt": "Main screen" },
+            { "type": "image", "src": "../Assets/FotosProyectos/W40k_TLM_1.webp", "alt": "Screenshot 1" },
+            { "type": "image", "src": "../Assets/FotosProyectos/W40k_TLM_2.webp", "alt": "Screenshot 2" },
+            { "type": "image", "src": "../Assets/FotosProyectos/W40k_TLM_3.webp", "alt": "Screenshot 3" }
           ]
         },
         {
           "id": "03",
-          "name": "Studio Lumen",
-          "category": "Photography portfolio",
-          "year": "2024",
-          "description": "Minimal portfolio for a photography collective, optimized for heavy imagery. I implemented progressive loading, full-screen galleries and a headless CMS so the team could update content without touching code.",
-          "tags": ["Astro", "CMS", "Performance"],
-          "roles": ["Frontend Development", "UI Design", "CMS Integration"],
+          "name": "El Imperio de Aevora",
+          "category": "Personal project",
+          "year": "2025",
+          "description_1": "El Imperio de Aevora is a worldbuilding project that reimagines history through an alternate timeline: a coup in 1868 overthrows the British monarchy and gives rise to a steampunk empire ruled under the principles of industrial efficiency, absolute hierarchy and obedience. The project develops the cosmology of this universe in depth, from its origin and founding to the social, political, military and economic structure that sustains it, built around the Twelve Founding Houses and the Aevar, a fictional energy resource that becomes the narrative and technological core of the entire empire.",
+          "description_2": "The site combines narrative, lore and web design to build an immersive experience: it includes historical accounts, character profiles, social hierarchy diagrams and detailed descriptions of technology, the military and daily life, all illustrated with AI-generated visual art. Beyond the narrative content, the project demonstrates skills in structuring complex information, web interface design, and building a coherent, self-consistent fictional universe meant as a foundation for future creative projects.",
+          "roles": ["Full world & character design", "Web design"],
           "links": [
-            { "label": "View website", "url": "#" }
+            { "label": "Website", "url": "https://izansl.github.io/aevora.github.io/" }
           ],
           "media": [
-            { "type": "image", "src": "https://picsum.photos/seed/lumen-1/1000/1250", "alt": "Studio Lumen main gallery" },
-            { "type": "image", "src": "https://picsum.photos/seed/lumen-2/1000/1250", "alt": "Single project view" },
-            { "type": "image", "src": "https://picsum.photos/seed/lumen-3/1000/1250", "alt": "Contact page" },
-            { "type": "image", "src": "https://picsum.photos/seed/lumen-4/1000/1250", "alt": "Mobile version of the gallery" }
-          ]
-        },
-        {
-          "id": "04",
-          "name": "Kioko App",
-          "category": "Mobile product",
-          "year": "2023",
-          "description": "Habit-tracking app with carefully tuned micro-interactions and its own component system. I worked with the product team to define the onboarding flow and designed the reward animations that play when a habit is completed.",
-          "tags": ["React Native", "UI Kit", "Prototype"],
-          "roles": ["Product Design", "Prototyping", "Component System"],
-          "links": [
-            { "label": "App Store", "url": "#" },
-            { "label": "Figma prototype", "url": "#" }
-          ],
-          "media": [
-            { "type": "image", "src": "https://picsum.photos/seed/kioko-1/1000/1250", "alt": "Kioko onboarding screen" },
-            { "type": "image", "src": "https://picsum.photos/seed/kioko-2/1000/1250", "alt": "Daily habits screen" },
-            { "type": "image", "src": "https://picsum.photos/seed/kioko-3/1000/1250", "alt": "Reward animation" }
-          ]
-        },
-        {
-          "id": "05",
-          "name": "Verbatim Coffee",
-          "category": "Branding + E-commerce",
-          "year": "2023",
-          "description": "Brand identity and online store for a specialty coffee shop with several locations. I designed the type system, packaging and a lightweight online store built for quick mobile ordering.",
-          "tags": ["Shopify", "Branding", "E-commerce"],
-          "roles": ["Art Direction", "Frontend Development", "Packaging Design"],
-          "links": [
-            { "label": "View store", "url": "#" },
-            { "label": "Brand book", "url": "#" }
-          ],
-          "media": [
-            { "type": "image", "src": "https://picsum.photos/seed/verbatim-1/1000/1250", "alt": "Verbatim Coffee brand identity" },
-            { "type": "image", "src": "https://picsum.photos/seed/verbatim-2/1000/1250", "alt": "Verbatim Coffee online store" },
-            { "type": "image", "src": "https://picsum.photos/seed/verbatim-3/1000/1250", "alt": "Product packaging" }
-          ]
-        },
-        {
-          "id": "06",
-          "name": "Solis Energy",
-          "category": "Product / Dashboard",
-          "year": "2023",
-          "description": "Monitoring dashboard for solar power installations, built for field technicians. I built real-time data visualisations and an offline mode that syncs logs once the connection comes back.",
-          "tags": ["Vue", "Data viz", "PWA"],
-          "roles": ["Frontend Development", "Data Visualisation", "PWA Architecture"],
-          "links": [
-            { "label": "View product", "url": "#" },
-            { "label": "Documentation", "url": "#" }
-          ],
-          "media": [
-            { "type": "image", "src": "https://picsum.photos/seed/solis-1/1000/1250", "alt": "Solis Energy main dashboard" },
-            { "type": "image", "src": "https://picsum.photos/seed/solis-2/1000/1250", "alt": "Installation detail view" },
-            { "type": "image", "src": "https://picsum.photos/seed/solis-3/1000/1250", "alt": "Offline mode on mobile" }
-          ]
-        },
-        {
-          "id": "07",
-          "name": "Marea Festival",
-          "category": "Event website",
-          "year": "2022",
-          "description": "Website for the Marea music festival, with an interactive line-up, ticket sales and a live mode for event day. The site handled over 200,000 visits during launch week without downtime.",
-          "tags": ["Next.js", "Animation", "Ticketing"],
-          "roles": ["Frontend Development", "Animation", "Performance Optimisation"],
-          "links": [
-            { "label": "View website", "url": "#" }
-          ],
-          "media": [
-            { "type": "image", "src": "https://picsum.photos/seed/marea-1/1000/1250", "alt": "Marea Festival homepage" },
-            { "type": "image", "src": "https://picsum.photos/seed/marea-2/1000/1250", "alt": "Interactive line-up" },
-            { "type": "image", "src": "https://picsum.photos/seed/marea-3/1000/1250", "alt": "Ticket sales page" },
-            { "type": "image", "src": "https://picsum.photos/seed/marea-4/1000/1250", "alt": "Mobile version of the site" }
-          ]
-        },
-        {
-          "id": "08",
-          "name": "Pulse Fitness",
-          "category": "Mobile app",
-          "year": "2022",
-          "description": "Personal training app with adaptive plans and progress tracking. I designed the progress chart system and built the shared animation library used across iOS and Android.",
-          "tags": ["Flutter", "UI Kit", "Animation"],
-          "roles": ["UI Design", "Frontend Development", "Animation System"],
-          "links": [
-            { "label": "App Store", "url": "#" },
-            { "label": "Google Play", "url": "#" }
-          ],
-          "media": [
-            { "type": "image", "src": "https://picsum.photos/seed/pulse-1/1000/1250", "alt": "Pulse Fitness home screen" },
-            { "type": "image", "src": "https://picsum.photos/seed/pulse-2/1000/1250", "alt": "Progress charts" },
-            { "type": "image", "src": "https://picsum.photos/seed/pulse-3/1000/1250", "alt": "Adaptive training plan" }
+            { "type": "image", "src": "../Assets/FotosProyectos/Aevora.jpg", "alt": "Screenshot 1" },
+            { "type": "image", "src": "../Assets/FotosProyectos/Aevora_1.jpg", "alt": "Screenshot 2" },
+            { "type": "image", "src": "../Assets/FotosProyectos/Aevora_2.png", "alt": "Screenshot 3" }
           ]
         }
       ]
     },
     "skills": {
       "eyebrow": "03 — skills",
-      "title": "What I do",
-      "subtitle": "From design to implementation, without losing detail along the way.",
+      "title": "Skills",
       "groups": [
         {
-          "name": "Frontend",
+          "name": "Technical Skills",
           "items": ["HTML5", "CSS / Sass", "JavaScript", "TypeScript", "React", "Next.js"]
         },
         {
-          "name": "Design",
-          "items": ["UI Design", "Prototyping", "Design systems", "Animation", "Accessibility"]
-        },
-        {
-          "name": "Backend",
-          "items": ["Node.js", "REST APIs", "Databases", "GraphQL"]
+          "name": "Professional Skills",
+          "items": ["UI Design", "Prototyping", "Design Systems", "Animation", "Accessibility"]
         }
       ]
     },
@@ -456,40 +269,41 @@
       "title": "My toolbox",
       "subtitle": "The software I work with every day.",
       "items": [
-        { "name": "Figma", "role": "UI design" },
-        { "name": "VS Code", "role": "Code editor" },
-        { "name": "Git & GitHub", "role": "Version control" },
-        { "name": "Webflow", "role": "No-code" },
-        { "name": "Framer", "role": "Prototyping" },
-        { "name": "Notion", "role": "Organisation" }
+        { "name": "Blender", "icon": "../Assets/Logos/BlenderLogo.png" },
+        { "name": "Figma", "icon": "../Assets/Logos/FigmaLogo.png" },
+        { "name": "Clip Studio Paint", "icon": "../Assets/Logos/ClipStudioPaintLogo.png" },
+        { "name": "Houdini", "icon": "../Assets/Logos/HoudiniLogo.png" },
+        { "name": "Photoshop", "icon": "../Assets/Logos/PhotoshopLogo.png" },
+        { "name": "Unity", "icon": "../Assets/Logos/UnityLogo.png" },
+        { "name": "Unreal Engine", "icon": "../Assets/Logos/UnrealLogo.png" },
+        { "name": "Zbrush", "icon": "../Assets/Logos/ZrbsuhLogo.png" },
+        { "name": "GitHub", "icon": "../Assets/Logos/GithubLogo.png" },
+        { "name": "Marmoset Toolbag", "icon": "../Assets/Logos/MarmosetLogo.png" }
       ]
     },
     "about": {
       "eyebrow": "05 — about me",
-      "title": "Hi, I'm Alex",
+      "title": "Hi, I'm Izan",
       "paragraphs": [
-        "I'm a frontend developer with over five years of experience building digital products for studios, startups and independent brands.",
-        "I obsess over details: animation that feels right, spacing that breathes, and code that's easy to maintain. I work closely with designers to bring ideas to production without losing their essence."
+        "I'm a game developer and designer about to graduate from CITM (UPC), driven by a passion that started in childhood. I specialise in Game Design, with a strong focus on narrative design and gameplay mechanics. My main goal is to create experiences that leave a lasting emotional impression on players.",
+        "I also bring technical value and versatility to development teams thanks to my complementary knowledge of 3D modelling. I'm looking to keep growing and combine my creativity with technical skill to bring titles to life that truly connect with their audience."
       ],
       "stats": [
-        { "value": "5+", "label": "Years of experience" },
-        { "value": "32", "label": "Projects shipped" },
-        { "value": "12", "label": "Happy clients" }
+        { "value": "5", "label": "Completed projects" },
+        { "value": "2", "label": "Projects in progress" }
       ]
     },
     "contact": {
       "eyebrow": "06 — contact",
-      "title": "Let's talk",
-      "description": "Got a project in mind? Send me a note and let's figure it out.",
-      "cta": "Say hello",
-      "email": "hola@alexrivera.dev",
+      "title": "Let's work together",
+      "description": "Interested in collaborating, or have a question? Feel free to reach out.",
+      "cta": "I usually reply in less than 24h.",
+      "email": "i.sanchezlozanoa@gmail.com",
       "socials": [
-        { "name": "GitHub", "url": "#" },
-        { "name": "LinkedIn", "url": "#" },
-        { "name": "Instagram", "url": "#" },
-        { "name": "Dribbble", "url": "#" }
+        { "name": "LinkedIn", "url": "https://www.linkedin.com/in/izan-sánchez-lozano/", "icon": "../Assets/Logos/LinkedInLogo.png" },
+        { "name": "ArtStation", "url": "https://www.artstation.com/erkabessa", "icon": "../Assets/Logos/ArtstationLogo.png" }
       ],
-      "footer": "Designed and built by Alex Rivera.",
+      "footer": "Designed and built by Izan Sánchez Lozano.",
       "back": "Back to top"
     }
   }

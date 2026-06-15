@@ -92,6 +92,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 17px;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -110,8 +111,36 @@ body {
   font-family: var(--font-body);
   background: var(--red);
   color: var(--ink);
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+}
+
+/* =========================================================
+   CUSTOM SCROLLBAR
+   ========================================================= */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--ink) var(--red);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--red);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ink);
+  border-radius: 999px;
+  border: 2px solid var(--red);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--red-deep);
 }
 
 a {
@@ -729,6 +758,21 @@ body.no-scroll {
   border-radius: 8px;
   transform: translateY(28px) scale(0.98);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  scrollbar-width: thin;
+  scrollbar-color: var(--red) var(--paper);
+}
+
+.project-modal__panel::-webkit-scrollbar-track {
+  background: var(--paper);
+}
+
+.project-modal__panel::-webkit-scrollbar-thumb {
+  background: var(--red);
+  border: 2px solid var(--paper);
+}
+
+.project-modal__panel::-webkit-scrollbar-thumb:hover {
+  background: var(--red-deep);
 }
 
 .project-modal.is-open .project-modal__panel {
@@ -807,15 +851,20 @@ body.no-scroll {
 }
 
 .project-modal__description {
-  line-height: 1.7;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: clamp(1rem, 1.05vw, 1.1rem);
+  line-height: 1.75;
   color: rgba(21, 17, 15, 0.78);
-  max-width: 48ch;
+  max-width: 54ch;
 }
 
 .project-modal__list {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
+  font-size: clamp(0.95rem, 1vw, 1.05rem);
 }
 
 .project-modal__list li {
@@ -840,6 +889,7 @@ body.no-scroll {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  font-size: clamp(0.95rem, 1vw, 1.05rem);
   font-weight: 600;
   border-bottom: 1px solid var(--line);
   padding-bottom: 6px;
@@ -854,7 +904,7 @@ body.no-scroll {
 
 .project-modal__media {
   position: relative;
-  min-height: 320px;
+  min-height: 360px;
   background: var(--ink);
 }
 
@@ -875,13 +925,17 @@ body.no-scroll {
   flex: 0 0 100%;
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(12px, 2vw, 24px);
 }
 
 .carousel__slide img,
 .carousel__slide video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 
@@ -944,7 +998,7 @@ body.no-scroll {
    ========================================================= */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: clamp(32px, 4vw, 64px);
 }
 
@@ -1015,6 +1069,12 @@ body.no-scroll {
   color: var(--paper);
 }
 
+.tool-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .tool-card__index {
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -1024,6 +1084,24 @@ body.no-scroll {
 
 .tool-card:hover .tool-card__index {
   color: rgba(255, 248, 242, 0.45);
+}
+
+.tool-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 7px;
+}
+
+.tool-card__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .tool-card__name {
@@ -1097,7 +1175,7 @@ body.no-scroll {
 
 .about__stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   gap: 16px;
 }
 
@@ -1167,6 +1245,13 @@ body.no-scroll {
   border-color: var(--paper);
 }
 
+.contact__note {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  color: var(--fg-muted);
+}
+
 .contact__bottom {
   display: flex;
   justify-content: space-between;
@@ -1189,7 +1274,28 @@ body.no-scroll {
 
 .contact__socials a {
   position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   transition: color 0.25s ease;
+}
+
+.contact__social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+
+.contact__social-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .contact__socials a::after {
