@@ -1,629 +1,248 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Izan Sanchez Lozano Portfolio</title>
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="Assets/Logo.png">
-  <link rel="apple-touch-icon" href="Assets/Logo.png">
-  
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Izan Sanchez — Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="bg-lines">
-    <svg class="bg-shape" viewBox="0 0 1200 600" preserveAspectRatio="none">
-      <!-- Relleno desde la línea superior hasta abajo -->
-      <path d="M0,70 
-              L200,70 L400,30 L800,30 L1000,70 L1200,70 
-              L1200,600 L0,600 Z"
-            class="bg-fill-shape"/>
-      
-      <!-- Línea superior -->
-      <polyline points="0,70 200,70 400,30 800,30 1000,70 1200,70" class="bg-stroke"/>
-    </svg>
-  </div>
-  <!-- Vertical Navigation Bar -->
-  <nav id="navbar">
-    <div class="nav-item" data-section="home">
-      <span>HOME</span>
-    </div>
-    <div class="nav-item" data-section="sobre-mi">
-      <span>ABOUT ME</span>
-    </div>
-    <div class="nav-item" data-section="habilidades">
-      <span>SKILLS</span>
-    </div>
-    <div class="nav-item" data-section="proyectos">
-      <span>PROJECTS</span>
-    </div>
-    <div class="nav-item" data-section="tools">
-      <span>TOOLS</span>
-    </div>
-    <div class="nav-item" data-section="contacto">
-      <span>CONTACT</span>
-  </nav>
 
-  <!-- Main Container -->
-  <div id="main-container">
-    
-    <!-- HOME SECTION -->
-    <section id="home" class="section active">
-      <div class="section-content">
-        <h1>IZAN SANCHEZ LOZANO</h1>
-        <p>Game & Narrative Designer</p>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a href="#home" class="nav__logo">
+      <span>AR</span><span class="nav__logo-dot">.</span>
+    </a>
+
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navList">
+      <span class="nav__toggle-text" data-i18n="nav.menu">Menú</span>
+      <span class="nav__toggle-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+
+    <nav class="nav__list" id="navList" aria-label="Secciones">
+      <a href="#home" class="nav__link" data-nav="home">
+        <span class="nav__index">01</span><span class="nav__label" data-i18n="nav.home">Inicio</span>
+      </a>
+      <a href="#projects" class="nav__link" data-nav="projects">
+        <span class="nav__index">02</span><span class="nav__label" data-i18n="nav.projects">Proyectos</span>
+      </a>
+      <a href="#skills" class="nav__link" data-nav="skills">
+        <span class="nav__index">03</span><span class="nav__label" data-i18n="nav.skills">Habilidades</span>
+      </a>
+      <a href="#tools" class="nav__link" data-nav="tools">
+        <span class="nav__index">04</span><span class="nav__label" data-i18n="nav.tools">Herramientas</span>
+      </a>
+      <a href="#about" class="nav__link" data-nav="about">
+        <span class="nav__index">05</span><span class="nav__label" data-i18n="nav.about">Sobre mí</span>
+      </a>
+      <a href="#contact" class="nav__link" data-nav="contact">
+        <span class="nav__index">06</span><span class="nav__label" data-i18n="nav.contact">Contacto</span>
+      </a>
+
+      <button class="lang-switch" id="langSwitch" type="button">
+        <span class="lang-switch__current">ES</span>
+        <span class="lang-switch__sep">/</span>
+        <span class="lang-switch__other" id="langLabel">EN</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ============ MAIN ============ -->
+  <main>
+
+    <!-- 01 HOME -->
+    <section id="home" class="section section--hero">
+      <div class="section__inner hero">
+
+        <div class="hero__top">
+          <span class="tag-label" data-i18n="hero.eyebrow">Portfolio — 2026</span>
+          <span class="hero__status">
+            <span class="hero__dot" aria-hidden="true"></span>
+            <span data-i18n="hero.status">Disponible para proyectos</span>
+          </span>
+        </div>
+
+        <h1 class="hero__title">
+          <span class="hero__name hero__name--outline glitch" data-i18n-text="hero.name1" data-text="ALEX">IZAN</span>
+          <span class="hero__slab">
+            <span class="hero__name hero__name--solid glitch" data-i18n-text="hero.name2" data-text="RIVERA">SANCHEZ LOZANO</span>
+          </span>
+        </h1>
+
+        <div class="hero__meta">
+          <p class="hero__role" data-i18n="hero.role">Game & Narrative Designer</p>
+          <p class="hero__tagline" data-i18n="hero.tagline">
+            Construyo interfaces rápidas, accesibles y con un punto justo de actitud.
+          </p>
+        </div>
+
+        <div class="hero__foot">
+          <span class="tag-label" data-i18n="hero.location">Barcelona, España</span>
+          <span class="tag-label" data-i18n="hero.year">Ed. 03 / 2026</span>
+          <span class="hero__scroll">
+            <span data-i18n="hero.scroll">Desplázate</span>
+            <span class="hero__scroll-arrow" aria-hidden="true">↓</span>
+          </span>
+        </div>
       </div>
     </section>
 
-    <!-- ABOUT ME SECTION -->
-    <section id="sobre-mi" class="section">
-      <div class="section-content">
-        <div class="sobre-mi-texto">
-          <h2>About Me</h2>
-          <p>I am a passionate Game Developer & Designer, currently in my final year at CITM (UPC). Since childhood, I have admired video games, initially as a spectator watching my older brother play, and over time, I have embraced the opportunity to become a creator and pursue a career in the industry.</p>
-          <p>Creativity has always been one of my strongest qualities, and I channel it into every project I work on. I specialize in Game Design, with a particular focus on narrative and gameplay mechanics. I am especially inspired by games that leave a lasting emotional impact on players, and I strive daily to develop experiences capable of achieving the same.</p>
-          <p>Beyond design, I am also interested in other aspects of development, particularly 3D modeling, which I practice as a hobby. This skill has allowed me to contribute to collaborative projects and support my teammates effectively.</p>
-          <p>My goal is to continue growing as a creator, combining creativity, technical skills, and passion to craft video games that truly connect with players.</p>
+    <!-- 02 PROJECTS -->
+    <section id="projects" class="section section--projects">
+      <div class="section__inner">
+        <div class="section__head">
+          <span class="tag-label" data-i18n="projects.eyebrow">02 — proyectos</span>
+          <h2 class="section__title" data-i18n="projects.title">Trabajos seleccionados</h2>
+          <p class="section__subtitle" data-i18n="projects.subtitle">Una muestra de proyectos recientes.</p>
         </div>
-        <div class="cv-descarga">
-          <h3>My Resume</h3>
-          <a href="ruta/a/tu-cv.pdf" download class="boton-cv">Download CV</a>
+
+        <div class="project-list" id="projectList" role="list">
+          <!-- injected by script.js -->
         </div>
       </div>
     </section>
 
-    <!-- SKILLS SECTION -->
-    <section id="habilidades" class="section">
-      <div class="section-content">
-        <div class="habilidades-columna">
-          <h3>Technical Skills</h3>
-          <ul>
-            <li>Unity Engine</li>
-            <li>C++ & Cs</li>
-            <li>Mechanics Design</li>
-            <li>Narrative Design</li>
-            <li>Prototyping</li>
-            <li>Balancing & QA</li>
-            <li>3D Hard-Surface Modeling</li>
-            <li>3D Sculping Modeling</li>
-            <li>Riggin</li>
+    <!-- 03 SKILLS -->
+    <section id="skills" class="section section--skills">
+      <div class="section__inner">
+        <div class="section__head">
+          <span class="tag-label" data-i18n="skills.eyebrow">03 — habilidades</span>
+          <h2 class="section__title" data-i18n="skills.title">Lo que sé hacer</h2>
+          <p class="section__subtitle" data-i18n="skills.subtitle">Del diseño a la implementación.</p>
+        </div>
+
+        <div class="skills-grid" id="skillsGrid">
+          <!-- injected by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 TOOLS -->
+    <section id="tools" class="section section--tools">
+      <div class="section__inner">
+        <div class="section__head">
+          <span class="tag-label" data-i18n="tools.eyebrow">04 — herramientas</span>
+          <h2 class="section__title" data-i18n="tools.title">Mi caja de herramientas</h2>
+          <p class="section__subtitle" data-i18n="tools.subtitle">El software con el que trabajo cada día.</p>
+        </div>
+
+        <div class="tools-grid" id="toolsGrid">
+          <!-- injected by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 ABOUT -->
+    <section id="about" class="section section--about">
+      <div class="section__inner about">
+        <div class="about__main">
+          <span class="tag-label" data-i18n="about.eyebrow">05 — sobre mí</span>
+          <h2 class="section__title" data-i18n="about.title">Hola, soy Alex</h2>
+          <div class="about__text" id="aboutText">
+            <!-- injected by script.js -->
+          </div>
+        </div>
+
+        <div class="about__side">
+          <div class="about__mark glitch" data-text="AR" aria-hidden="true">AR</div>
+          <div class="about__stats" id="aboutStats">
+            <!-- injected by script.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 CONTACT -->
+    <section id="contact" class="section section--contact">
+      <div class="section__inner contact">
+        <span class="tag-label" data-i18n="contact.eyebrow">06 — contacto</span>
+
+        <h2 class="contact__title glitch" data-i18n-text="contact.title" data-text="Hablemos">Hablemos</h2>
+
+        <p class="contact__desc" data-i18n="contact.description">
+          ¿Tienes un proyecto en mente? Escríbeme.
+        </p>
+
+        <a class="contact__email" id="contactEmail" href="mailto:hola@alexrivera.dev">
+          hola@alexrivera.dev
+        </a>
+
+        <div class="contact__bottom">
+          <ul class="contact__socials" id="contactSocials">
+            <!-- injected by script.js -->
           </ul>
+
+          <button class="back-to-top" id="backToTop" type="button">
+            <span data-i18n="contact.back">Volver arriba</span>
+            <span aria-hidden="true">↑</span>
+          </button>
         </div>
-        <div class="habilidades-columna">
-          <h3>Soft Skills</h3>
-          <ul>
-            <li>Strong Comunication</li>
-            <li>Active Listener</li>
-            <li>Critical Thinking</li>
-            <li>Problem Solving</li>
-            <li>Teamwork</li>
-            <li>Time Management</li>
-            <li>Adaptability</li>
-            <li>Creativity</li>
-            <li>Open to Feedback</li>
-        </div>
+
+        <p class="contact__footer" data-i18n="contact.footer">Diseñado y construido por Alex Rivera.</p>
       </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
-    <section id="proyectos" class="section">
-      <div class="section-content">
-        <!-- Controles del carrusel -->
-        <div class="proyectos-carousel-controls">
-          <button class="proyectos-carousel-btn prev" aria-label="Proyecto anterior">‹</button>
-          <button class="proyectos-carousel-btn next" aria-label="Proyecto siguiente">›</button>
-        </div>
-        
-        <div class="proyecto active" data-project="w40k-tlm">
-          <div class="proyecto-preview-image">
-            <img src="Assets/FotosProyectos/W40k_TLM.png" alt="W40K-TLM Preview">
-          </div>
-          <div class="proyecto-info">
-            <h3>W40K-TLM</h3>
-            <p>Warhammer 40,000 inspired Diablo-like game</p>
-          </div>
-        </div>
-        <div class="proyecto" data-project="asylum-of-creation">
-          <div class="proyecto-preview-image">
-            <img src="Assets/FotosProyectos/Asylum.png" alt="Asylum of Creation Preview">
-          </div>
-          <div class="proyecto-info">
-            <h3>Asylum of Creation</h3>
-            <p>7 day Game Jam game</p>
-          </div>
-        </div>
-        <div class="proyecto" data-project="spits-and-crypts">
-          <div class="proyecto-preview-image">
-            <img src="Assets/FotosProyectos/Spit&Crypts.png" alt="Spits & Crypts Preview">
-          </div>
-          <div class="proyecto-info">
-            <h3>Spits & Crypts</h3>
-            <p>2d RPG with turn based combat set in ancient Egypt</p>
-          </div>
-        </div>
-        
-        <!-- Indicadores del carrusel -->
-        <div class="proyectos-carousel-indicators">
-          <div class="proyectos-indicator active" data-index="0"></div>
-          <div class="proyectos-indicator" data-index="1"></div>
-          <div class="proyectos-indicator" data-index="2"></div>
-        </div>
-      </div>
-    </section>
+  </main>
 
-    <!-- TOOLS SECTION -->
-    <section id="tools" class="section">
-      <div class="section-content">
-        <h2>Tools</h2>
-        <div class="herramientas-container">
-          <div class="herramienta-item">
-            <img src="Assets/MayaLogo.png" alt="Maya" width="50" height="50">
-            <p>Maya</p>
+  <!-- ============ PROJECT MODAL ============ -->
+  <div class="project-modal" id="projectModal" aria-hidden="true">
+    <div class="project-modal__backdrop" data-close></div>
+    <div class="project-modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="project-modal__close" data-close type="button">
+        <span class="project-modal__close-label" id="modalCloseLabel">Cerrar</span>
+        <span aria-hidden="true">✕</span>
+      </button>
+
+      <div class="project-modal__grid">
+        <div class="project-modal__info">
+          <div class="project-modal__heading">
+            <span class="tag-label" id="modalMeta"></span>
+            <h3 class="project-modal__title" id="modalTitle"></h3>
           </div>
-          <div class="herramienta-item">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Blender_logo_no_text.svg" alt="Blender" width="50" height="50">
-            <p>Blender</p>
+
+          <div class="project-modal__section">
+            <h4 class="project-modal__label" id="modalDescriptionLabel">Descripción</h4>
+            <p class="project-modal__description" id="modalDescription"></p>
           </div>
-          <div class="herramienta-item">
-            <img src="Assets/ZrbsuhLogo.png" alt="ZBrush" width="50" height="50">
-            <p>ZBrush</p>
+
+          <div class="project-modal__section">
+            <h4 class="project-modal__label" id="modalRoleLabel">Rol</h4>
+            <ul class="project-modal__list" id="modalRoles"></ul>
           </div>
-          <div class="herramienta-item">
-            <img src="Assets/MarmosetLogo.png" alt="Marmoset Toolbag" width="50" height="50">
-            <p>Marmoset Toolbag</p>
-          </div>
-          <div class="herramienta-item">
-            <img src="https://cdn.worldvectorlogo.com/logos/substance-painter.svg" alt="Substance Painter" width="50" height="50">
-            <p>Substance Painter</p>
-          </div>
-          <div class="herramienta-item">
-            <img src="Assets/PhotoshopLogo.png" alt="Photoshop" width="50" height="50">
-            <p>Photoshop</p>
-          </div>
-          <div class="herramienta-item">
-            <img src="Assets/ClipStudioPaintLogo.png" alt="Clip Studio Paint" width="50" height="50">
-            <p>Clip Studio Paint</p>
-          </div>
-          <div class="herramienta-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" alt="Unity" width="50" height="50">
-            <p>Unity</p>
-          </div>
-          <div class="herramienta-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="Visual Studio Code" width="50" height="50">
-            <p>Visual Studio Code</p>
-          </div>
-          <div class="herramienta-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" width="50" height="50">
-            <p>Figma</p>
+
+          <div class="project-modal__section">
+            <h4 class="project-modal__label" id="modalLinksLabel">Enlaces</h4>
+            <ul class="project-modal__links" id="modalLinks"></ul>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- CONTACT SECTION -->
-    <section id="contacto" class="section">
-      <div class="section-content">
-        <h2>Let's Work Together</h2>
-        <p class="contact-description">Interested in collaborating or have questions? Feel free to reach out!</p>
-        <div class="contact-icons">
-          <a href="mailto:i.sanchezlozanoa@gmail.com">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" width="60">
-          </a>
-          <a href="https://github.com/izansl" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" width="60">
-          </a>
-          <a href="https://www.linkedin.com/in/izan-sánchez-lozano/?trk=opento_sprofile_details" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="60">
-          </a>
-        </div>
-        <p class="contact-response-time">I typically respond within 24 hours.</p>
-      </div>
-    </section>
+        <div class="project-modal__media">
+          <div class="carousel" id="carousel">
+            <div class="carousel__track" id="carouselTrack"></div>
 
-  </div>
+            <button class="carousel__arrow carousel__arrow--prev" id="carouselPrev" type="button">
+              <span class="sr-only" id="carouselPrevLabel">Anterior</span>
+              <span aria-hidden="true">‹</span>
+            </button>
+            <button class="carousel__arrow carousel__arrow--next" id="carouselNext" type="button">
+              <span class="sr-only" id="carouselNextLabel">Siguiente</span>
+              <span aria-hidden="true">›</span>
+            </button>
 
-  <!-- Modal -->
-  <div id="projectModal" class="modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2 id="modal-title">Project Title</h2>
-        <span class="close">&times;</span>
-      </div>
-      <div class="modal-body">
-        <div class="modal-info">
-          <div class="info-block">
-            <h3>Description</h3>
-            <p id="modal-description">Project description will appear here...</p>
-          </div>
-          <div class="info-block">
-            <h3>My Role</h3>
-            <ul id="modal-role">
-              <li>Role details will appear here...</li>
-            </ul>
-          </div>
-          <div class="info-block">
-            <h3>Useful Links</h3>
-            <div id="modal-links"></div>
-          </div>
-        </div>
-        <div class="modal-media">
-          <div id="modal-images">
-            <div class="placeholder">Images and videos will appear here</div>
+            <div class="carousel__dots" id="carouselDots"></div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- JavaScript -->
-  <script>
-    // ============================================================
-    // PROJECT DATA - EDIT HERE
-    // ============================================================
-    const projectData = {
-      'w40k-tlm': {
-        description: 'Warhammer 40K: The Last Marine was developed as part of the Project 3 course, where the entire class collaborated in departments, simulating the structure and workflow of a AAA game studio. The project was based on a pre-established IP and genre, and it was developed using a custom-built game engine.\n\nAs a part of Design tema, during development, I took on multiple roles. My primary responsibility was designing all enemy characters and the boss, creating their visual design, behaviors, attack patterns, and statistics entirely from scratch, while staying faithful to the established IP. Additionally, I contributed as part of the QA team, thoroughly testing and refining the game to ensure a polished final release.',
-        role: [
-          'Rol 1 - Enemy Design',
-          'Rol 2 - QA Testing & Balancing',
-          'Rol 3 - Audio Design',
-        ],
-        links: [
-          { text: 'GitHub Repository', url: 'https://github.com/Burned-Games/W40K-TLM' },
-          { text: 'Website', url: 'https://burned-games.github.io' }
-        ],
-        media: [
-          { type: 'youtube', src: 'https://www.youtube.com/watch?v=pNp_OPTwnTo', alt: 'W40K-TLM Trailer' },
-          { type: 'image', src: 'Assets/FotosProyectos/W40k_TLM_1.webp', alt: 'W40K-TLM Screenshot 1' },
-          { type: 'image', src: 'Assets/FotosProyectos/W40k_TLM_2.webp', alt: 'W40K-TLM Screenshot 2' },
-          { type: 'image', src: 'Assets/FotosProyectos/W40k_TLM_3.webp', alt: 'W40K-TLM Screenshot 3' }
-        ]
-      },
-      'asylum-of-creation': {
-        description: 'The Asylum of Creation was developed in seven days for the 8th Gran CITM Game Jam, where my team and I formed Primate Studio to participate. It is an original IP where players take on the role of one of Dr. Darwin’s test subjects, trapped in his experimental world that grows increasingly oppressive and dangerous through combat and mystery.\n\nGiven the limited time and small team size, I took on multiple responsibilities during development. On the design side, I worked on gameplay mechanics and level design. On the art side, I created all of the environment assets used throughout the levels, as well as the game’s UI.',
-        role: [
-          'Rol 1 - Gameplay & Level Design',
-          'Rol 2 - Environment Artist',
-          'Rol 3 - UI/UX Design'
-        ],
-        links: [
-          { text: 'Itch.io', url: 'https://paulo-white.itch.io/the-asylum-of-creation' },
-          { text: 'Primate Studio', url: 'https://primate-studio.github.io' }
-        ],
-        media: [
-          { type: 'youtube', src: 'https://www.youtube.com/watch?v=mHzj64I8j7s', alt: 'Asylum of Creation Trailer' },
-          { type: 'image', src: 'Assets/FotosProyectos/Asylum_1.png', alt: 'Asylum of Creation Screenshot 1' },
-          { type: 'image', src: 'Assets/FotosProyectos/Asylum_2.png', alt: 'Asylum of Creation Screenshot 2' },
-          { type: 'image', src: 'Assets/FotosProyectos/Asylum_3.png', alt: 'Asylum of Creation Screenshot 3' }
-        ]
-      },
-      'spits-and-crypts': {
-        description: 'Spits & Crypts was developed over the course of four months by a team of 20. Unlike shorter game jam projects, it placed a strong emphasis on narrative. As part of the design team, I contributed to crafting a story that was seamlessly woven into the gameplay.\n\nThroughout development, we iterated extensively, responding to feedback, aligning with team capabilities, and adapting to time constraints. This process resulted in a well-rounded final product, featuring a wide range of gameplay systems, all implemented in SDL.',
-        role: [
-          'Rol 1 - Narrative Design',
-          'Rol 2 - Enemies Design',
-        ],
-        links: [
-          { text: 'Itch.io', url: 'https://picky-rats.itch.io/spits-and-crypts' },
-          { text: 'Trailer', url: 'https://youtu.be/U7J9S3JY0Gg' },
-          { text: 'WebSite', url: 'https://pickyrats.github.io/Spits-and-Crypts' }
-        ],
-        media: [
-          { type: 'youtube', src: 'https://youtu.be/U7J9S3JY0Gg', alt: 'Spits & Crypts Trailer' },
-          { type: 'image', src: 'Assets/FotosProyectos/Spit&Crypts_1.png', alt: 'Spits & Crypts Screenshot 1' },
-          { type: 'image', src: 'Assets/FotosProyectos/Spit&Crypts_2.png', alt: 'Spits & Crypts Screenshot 2' },
-          { type: 'image', src: 'Assets/FotosProyectos/Spit&Crypts_3.png', alt: 'Spits & Crypts Screenshot 3' }
-        ]
-      }
-    };
-    // ============================================================
-
-    // Navigation functionality
-    const navItems = document.querySelectorAll('.nav-item');
-    const sections = document.querySelectorAll('.section');
-
-    navItems.forEach(item => {
-      item.addEventListener('click', function() {
-        const targetSection = this.getAttribute('data-section');
-        
-        // Remove active class from all nav items and sections
-        navItems.forEach(nav => nav.classList.remove('active'));
-        sections.forEach(section => section.classList.remove('active'));
-        
-        // Add active class to clicked nav item and target section
-        this.classList.add('active');
-        document.getElementById(targetSection).classList.add('active');
-      });
-    });
-
-    // Modal functionality
-    const modal = document.getElementById('projectModal');
-    const modalTitle = document.getElementById('modal-title');
-    const modalDescription = document.getElementById('modal-description');
-    const modalRole = document.getElementById('modal-role');
-    const modalLinks = document.getElementById('modal-links');
-    const modalImages = document.getElementById('modal-images');
-    const closeBtn = document.querySelector('.close');
-
-    document.querySelectorAll('.proyecto').forEach(proyecto => {
-      proyecto.addEventListener('click', function() {
-        const projectId = this.getAttribute('data-project');
-        const project = projectData[projectId];
-        
-        if (project) {
-          modalTitle.textContent = project.title;
-          modalDescription.innerHTML = project.description.replace(/\n\n/g, '<br><br>');
-          
-          modalRole.innerHTML = '';
-          project.role.forEach(roleItem => {
-            const li = document.createElement('li');
-            li.textContent = roleItem;
-            modalRole.appendChild(li);
-          });
-          
-          modalLinks.innerHTML = '';
-          project.links.forEach(link => {
-            const a = document.createElement('a');
-            a.href = link.url;
-            a.textContent = link.text;
-            a.className = 'project-link';
-            a.target = '_blank';
-            modalLinks.appendChild(a);
-          });
-          
-          // Handle media content
-          modalImages.innerHTML = '';
-          if (project.media && project.media.length > 0) {
-            const videos = project.media.filter(item => item.type === 'youtube' || item.type === 'video');
-            const images = project.media.filter(item => item.type === 'image');
-            
-            // Add videos first
-            videos.forEach(mediaItem => {
-              if (mediaItem.type === 'video') {
-                const video = document.createElement('video');
-                video.src = mediaItem.src;
-                video.controls = true;
-                if (mediaItem.poster) {
-                  video.poster = mediaItem.poster;
-                }
-                modalImages.appendChild(video);
-              } else if (mediaItem.type === 'youtube') {
-                const iframe = document.createElement('iframe');
-                // Convert YouTube URL to embed format
-                let videoId = '';
-                if (mediaItem.src.includes('youtu.be/')) {
-                  videoId = mediaItem.src.split('youtu.be/')[1].split(/[?&]/)[0];
-                } else if (mediaItem.src.includes('youtube.com/watch?v=')) {
-                  videoId = mediaItem.src.split('v=')[1].split('&')[0];
-                }
-                iframe.src = `https://www.youtube.com/embed/${videoId}`;
-                iframe.width = '100%';
-                iframe.height = '250';
-                iframe.frameBorder = '0';
-                iframe.allowFullscreen = true;
-                iframe.title = mediaItem.alt || 'YouTube video';
-                modalImages.appendChild(iframe);
-              }
-            });
-            
-            // Add image carousel if there are images
-            if (images.length > 0) {
-              const carousel = document.createElement('div');
-              carousel.className = 'image-carousel';
-              
-              const carouselContainer = document.createElement('div');
-              carouselContainer.className = 'carousel-container';
-              
-              // Add images
-              images.forEach((mediaItem, index) => {
-                const img = document.createElement('img');
-                img.src = mediaItem.src;
-                img.alt = mediaItem.alt || 'Project image';
-                img.className = 'carousel-image';
-                if (index === 0) img.classList.add('active');
-                carouselContainer.appendChild(img);
-              });
-              
-              carousel.appendChild(carouselContainer);
-              
-              // Add controls if more than one image
-              if (images.length > 1) {
-                const controls = document.createElement('div');
-                controls.className = 'carousel-controls';
-                
-                const prevBtn = document.createElement('button');
-                prevBtn.className = 'carousel-btn';
-                prevBtn.textContent = '‹';
-                prevBtn.setAttribute('aria-label', 'Previous image');
-                
-                const nextBtn = document.createElement('button');
-                nextBtn.className = 'carousel-btn';
-                nextBtn.textContent = '›';
-                nextBtn.setAttribute('aria-label', 'Next image');
-                
-                controls.appendChild(prevBtn);
-                controls.appendChild(nextBtn);
-                carousel.appendChild(controls);
-                
-                // Add indicators
-                const indicators = document.createElement('div');
-                indicators.className = 'carousel-indicators';
-                
-                images.forEach((_, index) => {
-                  const indicator = document.createElement('div');
-                  indicator.className = 'indicator';
-                  if (index === 0) indicator.classList.add('active');
-                  indicators.appendChild(indicator);
-                });
-                carousel.appendChild(indicators);
-                
-                // Carousel functionality
-                let currentImageIndex = 0;
-                
-                const showImage = (index) => {
-                  carouselContainer.querySelectorAll('.carousel-image').forEach((img, i) => {
-                    img.classList.toggle('active', i === index);
-                  });
-                  indicators.querySelectorAll('.indicator').forEach((ind, i) => {
-                    ind.classList.toggle('active', i === index);
-                  });
-                  prevBtn.disabled = index === 0;
-                  nextBtn.disabled = index === images.length - 1;
-                };
-                
-                prevBtn.addEventListener('click', () => {
-                  if (currentImageIndex > 0) {
-                    currentImageIndex--;
-                    showImage(currentImageIndex);
-                  }
-                });
-                
-                nextBtn.addEventListener('click', () => {
-                  if (currentImageIndex < images.length - 1) {
-                    currentImageIndex++;
-                    showImage(currentImageIndex);
-                  }
-                });
-                
-                indicators.querySelectorAll('.indicator').forEach((indicator, index) => {
-                  indicator.addEventListener('click', () => {
-                    currentImageIndex = index;
-                    showImage(currentImageIndex);
-                  });
-                });
-                
-                // Initialize
-                showImage(0);
-              }
-              
-              modalImages.appendChild(carousel);
-            }
-          } else {
-            // Show placeholder if no media
-            const placeholder = document.createElement('div');
-            placeholder.className = 'placeholder';
-            placeholder.textContent = 'Images and videos will appear here';
-            modalImages.appendChild(placeholder);
-          }
-          
-          modal.style.display = 'block';
-          setTimeout(() => {
-            modal.classList.add('show');
-          }, 10);
-        }
-      });
-    });
-
-    closeBtn.addEventListener('click', function() {
-      modal.classList.remove('show');
-      setTimeout(() => {
-        modal.style.display = 'none';
-      }, 300);
-    });
-
-    window.addEventListener('click', function(event) {
-      if (event.target === modal) {
-        modal.classList.remove('show');
-        setTimeout(() => {
-          modal.style.display = 'none';
-        }, 300);
-      }
-    });
-
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'Escape' && modal.style.display === 'block') {
-        modal.classList.remove('show');
-        setTimeout(() => {
-          modal.style.display = 'none';
-        }, 300);
-      }
-    });
-
-    // ============================================================
-    // PROJECTS CAROUSEL FOR MOBILE
-    // ============================================================
-    const proyectos = document.querySelectorAll('.proyecto');
-    const prevBtn = document.querySelector('.proyectos-carousel-btn.prev');
-    const nextBtn = document.querySelector('.proyectos-carousel-btn.next');
-    const indicators = document.querySelectorAll('.proyectos-indicator');
-    let currentProjectIndex = 0;
-
-    function showProject(index) {
-      // Ocultar todos los proyectos
-      proyectos.forEach((proyecto, i) => {
-        proyecto.classList.toggle('active', i === index);
-      });
-      
-      // Actualizar indicadores
-      indicators.forEach((indicator, i) => {
-        indicator.classList.toggle('active', i === index);
-      });
-      
-      // Actualizar estado de botones
-      prevBtn.disabled = index === 0;
-      nextBtn.disabled = index === proyectos.length - 1;
-    }
-
-    // Botón anterior
-    prevBtn.addEventListener('click', () => {
-      if (currentProjectIndex > 0) {
-        currentProjectIndex--;
-        showProject(currentProjectIndex);
-      }
-    });
-
-    // Botón siguiente
-    nextBtn.addEventListener('click', () => {
-      if (currentProjectIndex < proyectos.length - 1) {
-        currentProjectIndex++;
-        showProject(currentProjectIndex);
-      }
-    });
-
-    // Click en indicadores
-    indicators.forEach((indicator, index) => {
-      indicator.addEventListener('click', () => {
-        currentProjectIndex = index;
-        showProject(currentProjectIndex);
-      });
-    });
-
-    // Soporte para gestos táctiles (swipe)
-    let touchStartX = 0;
-    let touchEndX = 0;
-    const proyectosSection = document.getElementById('proyectos');
-
-    proyectosSection.addEventListener('touchstart', (e) => {
-      touchStartX = e.changedTouches[0].screenX;
-    });
-
-    proyectosSection.addEventListener('touchend', (e) => {
-      touchEndX = e.changedTouches[0].screenX;
-      handleSwipe();
-    });
-
-    function handleSwipe() {
-      const swipeThreshold = 50;
-      const diff = touchStartX - touchEndX;
-      
-      if (Math.abs(diff) > swipeThreshold) {
-        if (diff > 0 && currentProjectIndex < proyectos.length - 1) {
-          // Swipe izquierda - siguiente proyecto
-          currentProjectIndex++;
-          showProject(currentProjectIndex);
-        } else if (diff < 0 && currentProjectIndex > 0) {
-          // Swipe derecha - proyecto anterior
-          currentProjectIndex--;
-          showProject(currentProjectIndex);
-        }
-      }
-    }
-
-    // Inicializar
-    showProject(0);
-  </script>
-
-  <script src="Animation.js"></script>
+  <script src="script.js"></script>
 </body>
-</html
+</html>

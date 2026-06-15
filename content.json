@@ -1,0 +1,496 @@
+{
+  "es": {
+    "meta": {
+      "title": "Alex Rivera — Desarrollador Frontend",
+      "langLabel": "EN"
+    },
+    "nav": {
+      "home": "Inicio",
+      "projects": "Proyectos",
+      "skills": "Habilidades",
+      "tools": "Herramientas",
+      "about": "Sobre mí",
+      "contact": "Contacto",
+      "menu": "Menú",
+      "close": "Cerrar"
+    },
+    "hero": {
+      "eyebrow": "Portfolio — 2026",
+      "name1": "ALEX",
+      "name2": "RIVERA",
+      "role": "Desarrollador Frontend",
+      "tagline": "Construyo interfaces rápidas, accesibles y con un punto justo de actitud. Mezclo código limpio con detalles que se notan.",
+      "status": "Disponible para proyectos",
+      "location": "Barcelona, España",
+      "year": "Ed. 03 / 2026",
+      "scroll": "Desplázate"
+    },
+    "projects": {
+      "eyebrow": "02 — proyectos",
+      "title": "Trabajos seleccionados",
+      "subtitle": "Una muestra de proyectos recientes, de marca a producto. Abre cada módulo para ver el detalle.",
+      "labels": {
+        "open": "Abrir",
+        "description": "Descripción",
+        "role": "Rol",
+        "links": "Enlaces",
+        "close": "Cerrar",
+        "prev": "Anterior",
+        "next": "Siguiente"
+      },
+      "items": [
+        {
+          "id": "01",
+          "name": "Nimbus Studio",
+          "category": "Identidad + Web",
+          "year": "2025",
+          "description": "Sitio web y sistema visual para un estudio de animación, con tipografía cinética y transiciones a medida. El objetivo era transmitir movimiento incluso en las páginas estáticas, así que gran parte del trabajo se centró en microinteracciones y en un sistema de easing coherente en toda la web.",
+          "tags": ["Branding", "Webflow", "Motion"],
+          "roles": ["Diseño UI", "Desarrollo Frontend", "Animación"],
+          "links": [
+            { "label": "Ver sitio web", "url": "#" },
+            { "label": "Case study", "url": "#" }
+          ],
+          "media": [
+            { "type": "image", "src": "https://picsum.photos/seed/nimbus-1/1000/1250", "alt": "Pantalla principal de Nimbus Studio" },
+            { "type": "image", "src": "https://picsum.photos/seed/nimbus-2/1000/1250", "alt": "Detalle de tipografía cinética" },
+            { "type": "image", "src": "https://picsum.photos/seed/nimbus-3/1000/1250", "alt": "Vista móvil del proyecto" }
+          ]
+        },
+        {
+          "id": "02",
+          "name": "Fintrack",
+          "category": "Producto / SaaS",
+          "year": "2024",
+          "description": "Panel financiero centrado en datos en tiempo real, con foco en rendimiento y accesibilidad. Diseñé y construí el sistema de componentes desde cero, priorizando la legibilidad de los datos y tiempos de carga por debajo de un segundo incluso con miles de filas.",
+          "tags": ["React", "Dashboards", "UX"],
+          "roles": ["Desarrollo Frontend", "Sistema de diseño", "Optimización de rendimiento"],
+          "links": [
+            { "label": "Ver producto", "url": "#" },
+            { "label": "Repositorio", "url": "#" }
+          ],
+          "media": [
+            { "type": "image", "src": "https://picsum.photos/seed/fintrack-1/1000/1250", "alt": "Dashboard principal de Fintrack" },
+            { "type": "image", "src": "https://picsum.photos/seed/fintrack-2/1000/1250", "alt": "Gráficas en tiempo real" },
+            { "type": "image", "src": "https://picsum.photos/seed/fintrack-3/1000/1250", "alt": "Tema oscuro de la aplicación" }
+          ]
+        },
+        {
+          "id": "03",
+          "name": "Estudio Lumen",
+          "category": "Portfolio fotográfico",
+          "year": "2024",
+          "description": "Portfolio minimalista para un colectivo de fotografía, optimizado para imágenes pesadas. Implementé carga progresiva, galerías a pantalla completa y un CMS headless para que el equipo pudiera actualizar el contenido sin tocar código.",
+          "tags": ["Astro", "CMS", "Performance"],
+          "roles": ["Desarrollo Frontend", "Diseño UI", "Integración de CMS"],
+          "links": [
+            { "label": "Ver sitio web", "url": "#" }
+          ],
+          "media": [
+            { "type": "image", "src": "https://picsum.photos/seed/lumen-1/1000/1250", "alt": "Galería principal de Estudio Lumen" },
+            { "type": "image", "src": "https://picsum.photos/seed/lumen-2/1000/1250", "alt": "Vista de proyecto individual" },
+            { "type": "image", "src": "https://picsum.photos/seed/lumen-3/1000/1250", "alt": "Página de contacto" },
+            { "type": "image", "src": "https://picsum.photos/seed/lumen-4/1000/1250", "alt": "Versión móvil de la galería" }
+          ]
+        },
+        {
+          "id": "04",
+          "name": "Kioko App",
+          "category": "Producto móvil",
+          "year": "2023",
+          "description": "App de hábitos con microinteracciones cuidadas y un sistema de componentes propio. Trabajé junto al equipo de producto para definir el flujo de onboarding y diseñé las animaciones de recompensa que aparecen al completar un hábito.",
+          "tags": ["React Native", "UI Kit", "Prototipo"],
+          "roles": ["Diseño de producto", "Prototipado", "Sistema de componentes"],
+          "links": [
+            { "label": "App Store", "url": "#" },
+            { "label": "Prototipo Figma", "url": "#" }
+          ],
+          "media": [
+            { "type": "image", "src": "https://picsum.photos/seed/kioko-1/1000/1250", "alt": "Pantalla de onboarding de Kioko" },
+            { "type": "image", "src": "https://picsum.photos/seed/kioko-2/1000/1250", "alt": "Pantalla de hábitos diarios" },
+            { "type": "image", "src": "https://picsum.photos/seed/kioko-3/1000/1250", "alt": "Animación de recompensa" }
+          ]
+        },
+        {
+          "id": "05",
+          "name": "Verbatim Coffee",
+          "category": "Branding + E-commerce",
+          "year": "2023",
+          "description": "Identidad de marca y tienda online para una cafetería de especialidad con varios locales. Diseñé el sistema tipográfico, el empaquetado y una tienda online ligera pensada para pedidos rápidos desde el móvil.",
+          "tags": ["Shopify", "Branding", "E-commerce"],
+          "roles": ["Dirección de arte", "Desarrollo Frontend", "Diseño de packaging"],
+          "links": [
+            { "label": "Ver tienda", "url": "#" },
+            { "label": "Brand book", "url": "#" }
+          ],
+          "media": [
+            { "type": "image", "src": "https://picsum.photos/seed/verbatim-1/1000/1250", "alt": "Identidad de marca de Verbatim Coffee" },
+            { "type": "image", "src": "https://picsum.photos/seed/verbatim-2/1000/1250", "alt": "Tienda online de Verbatim Coffee" },
+            { "type": "image", "src": "https://picsum.photos/seed/verbatim-3/1000/1250", "alt": "Packaging de los productos" }
+          ]
+        },
+        {
+          "id": "06",
+          "name": "Solis Energy",
+          "category": "Producto / Dashboard",
+          "year": "2023",
+          "description": "Panel de monitorización para instalaciones de energía solar, pensado para técnicos en campo. Construí visualizaciones de datos en tiempo real y un modo offline que sincroniza los registros cuando vuelve la conexión.",
+          "tags": ["Vue", "Data viz", "PWA"],
+          "roles": ["Desarrollo Frontend", "Visualización de datos", "Arquitectura PWA"],
+          "links": [
+            { "label": "Ver producto", "url": "#" },
+            { "label": "Documentación", "url": "#" }
+          ],
+          "media": [
+            { "type": "image", "src": "https://picsum.photos/seed/solis-1/1000/1250", "alt": "Panel principal de Solis Energy" },
+            { "type": "image", "src": "https://picsum.photos/seed/solis-2/1000/1250", "alt": "Vista de detalle de una instalación" },
+            { "type": "image", "src": "https://picsum.photos/seed/solis-3/1000/1250", "alt": "Modo offline en dispositivo móvil" }
+          ]
+        },
+        {
+          "id": "07",
+          "name": "Marea Festival",
+          "category": "Web de evento",
+          "year": "2022",
+          "description": "Web del festival de música Marea, con line-up interactivo, venta de entradas y un modo en vivo para el día del evento. El sitio recibió más de 200.000 visitas durante la semana de lanzamiento sin caídas.",
+          "tags": ["Next.js", "Animación", "Ticketing"],
+          "roles": ["Desarrollo Frontend", "Animación", "Optimización de rendimiento"],
+          "links": [
+            { "label": "Ver sitio web", "url": "#" }
+          ],
+          "media": [
+            { "type": "image", "src": "https://picsum.photos/seed/marea-1/1000/1250", "alt": "Portada del festival Marea" },
+            { "type": "image", "src": "https://picsum.photos/seed/marea-2/1000/1250", "alt": "Line-up interactivo" },
+            { "type": "image", "src": "https://picsum.photos/seed/marea-3/1000/1250", "alt": "Página de venta de entradas" },
+            { "type": "image", "src": "https://picsum.photos/seed/marea-4/1000/1250", "alt": "Versión móvil del sitio" }
+          ]
+        },
+        {
+          "id": "08",
+          "name": "Pulse Fitness",
+          "category": "App móvil",
+          "year": "2022",
+          "description": "App de entrenamiento personal con planes adaptativos y seguimiento de progreso. Diseñé el sistema de gráficas de progreso y construí la librería de animaciones compartida entre iOS y Android.",
+          "tags": ["Flutter", "UI Kit", "Animación"],
+          "roles": ["Diseño UI", "Desarrollo Frontend", "Sistema de animación"],
+          "links": [
+            { "label": "App Store", "url": "#" },
+            { "label": "Google Play", "url": "#" }
+          ],
+          "media": [
+            { "type": "image", "src": "https://picsum.photos/seed/pulse-1/1000/1250", "alt": "Pantalla principal de Pulse Fitness" },
+            { "type": "image", "src": "https://picsum.photos/seed/pulse-2/1000/1250", "alt": "Gráficas de progreso" },
+            { "type": "image", "src": "https://picsum.photos/seed/pulse-3/1000/1250", "alt": "Plan de entrenamiento adaptativo" }
+          ]
+        }
+      ]
+    },
+    "skills": {
+      "eyebrow": "03 — habilidades",
+      "title": "Lo que sé hacer",
+      "subtitle": "Del diseño a la implementación, sin perder detalle por el camino.",
+      "groups": [
+        {
+          "name": "Frontend",
+          "items": ["HTML5", "CSS / Sass", "JavaScript", "TypeScript", "React", "Next.js"]
+        },
+        {
+          "name": "Diseño",
+          "items": ["UI Design", "Prototipado", "Sistemas de diseño", "Animación", "Accesibilidad"]
+        },
+        {
+          "name": "Backend",
+          "items": ["Node.js", "APIs REST", "Bases de datos", "GraphQL"]
+        }
+      ]
+    },
+    "tools": {
+      "eyebrow": "04 — herramientas",
+      "title": "Mi caja de herramientas",
+      "subtitle": "El software con el que trabajo cada día.",
+      "items": [
+        { "name": "Figma", "role": "Diseño UI" },
+        { "name": "VS Code", "role": "Editor de código" },
+        { "name": "Git & GitHub", "role": "Control de versiones" },
+        { "name": "Webflow", "role": "No-code" },
+        { "name": "Framer", "role": "Prototipado" },
+        { "name": "Notion", "role": "Organización" }
+      ]
+    },
+    "about": {
+      "eyebrow": "05 — sobre mí",
+      "title": "Hola, soy Alex",
+      "paragraphs": [
+        "Soy desarrollador frontend con más de cinco años de experiencia construyendo productos digitales para estudios, startups y marcas independientes.",
+        "Me obsesiona el detalle: la animación que se siente bien, el espaciado que respira y el código que es fácil de mantener. Trabajo de cerca con diseñadores para llevar las ideas a producción sin perder la esencia."
+      ],
+      "stats": [
+        { "value": "5+", "label": "Años de experiencia" },
+        { "value": "32", "label": "Proyectos terminados" },
+        { "value": "12", "label": "Clientes felices" }
+      ]
+    },
+    "contact": {
+      "eyebrow": "06 — contacto",
+      "title": "Hablemos",
+      "description": "¿Tienes un proyecto en mente? Escríbeme y lo hablamos con calma.",
+      "cta": "Escríbeme",
+      "email": "hola@alexrivera.dev",
+      "socials": [
+        { "name": "GitHub", "url": "#" },
+        { "name": "LinkedIn", "url": "#" },
+        { "name": "Instagram", "url": "#" },
+        { "name": "Dribbble", "url": "#" }
+      ],
+      "footer": "Diseñado y construido por Alex Rivera.",
+      "back": "Volver arriba"
+    }
+  },
+  "en": {
+    "meta": {
+      "title": "Alex Rivera — Frontend Developer",
+      "langLabel": "ES"
+    },
+    "nav": {
+      "home": "Home",
+      "projects": "Projects",
+      "skills": "Skills",
+      "tools": "Tools",
+      "about": "About",
+      "contact": "Contact",
+      "menu": "Menu",
+      "close": "Close"
+    },
+    "hero": {
+      "eyebrow": "Portfolio — 2026",
+      "name1": "ALEX",
+      "name2": "RIVERA",
+      "role": "Frontend Developer",
+      "tagline": "I build interfaces that are fast, accessible, and just opinionated enough. Clean code meets details that actually matter.",
+      "status": "Available for projects",
+      "location": "Barcelona, Spain",
+      "year": "Ed. 03 / 2026",
+      "scroll": "Scroll"
+    },
+    "projects": {
+      "eyebrow": "02 — projects",
+      "title": "Selected work",
+      "subtitle": "A snapshot of recent projects, from branding to product. Open each module to see the details.",
+      "labels": {
+        "open": "Open",
+        "description": "Description",
+        "role": "Role",
+        "links": "Links",
+        "close": "Close",
+        "prev": "Previous",
+        "next": "Next"
+      },
+      "items": [
+        {
+          "id": "01",
+          "name": "Nimbus Studio",
+          "category": "Identity + Web",
+          "year": "2025",
+          "description": "Website and visual system for an animation studio, with kinetic type and custom transitions. The goal was to convey motion even on static pages, so most of the work focused on micro-interactions and a consistent easing system across the site.",
+          "tags": ["Branding", "Webflow", "Motion"],
+          "roles": ["UI Design", "Frontend Development", "Animation"],
+          "links": [
+            { "label": "View website", "url": "#" },
+            { "label": "Case study", "url": "#" }
+          ],
+          "media": [
+            { "type": "image", "src": "https://picsum.photos/seed/nimbus-1/1000/1250", "alt": "Nimbus Studio homepage" },
+            { "type": "image", "src": "https://picsum.photos/seed/nimbus-2/1000/1250", "alt": "Kinetic type detail" },
+            { "type": "image", "src": "https://picsum.photos/seed/nimbus-3/1000/1250", "alt": "Mobile view of the project" }
+          ]
+        },
+        {
+          "id": "02",
+          "name": "Fintrack",
+          "category": "Product / SaaS",
+          "year": "2024",
+          "description": "Financial dashboard built around real-time data, with a focus on performance and accessibility. I designed and built the component system from scratch, prioritising data readability and sub-second load times even with thousands of rows.",
+          "tags": ["React", "Dashboards", "UX"],
+          "roles": ["Frontend Development", "Design System", "Performance Optimisation"],
+          "links": [
+            { "label": "View product", "url": "#" },
+            { "label": "Repository", "url": "#" }
+          ],
+          "media": [
+            { "type": "image", "src": "https://picsum.photos/seed/fintrack-1/1000/1250", "alt": "Fintrack main dashboard" },
+            { "type": "image", "src": "https://picsum.photos/seed/fintrack-2/1000/1250", "alt": "Real-time charts" },
+            { "type": "image", "src": "https://picsum.photos/seed/fintrack-3/1000/1250", "alt": "Dark theme of the app" }
+          ]
+        },
+        {
+          "id": "03",
+          "name": "Studio Lumen",
+          "category": "Photography portfolio",
+          "year": "2024",
+          "description": "Minimal portfolio for a photography collective, optimized for heavy imagery. I implemented progressive loading, full-screen galleries and a headless CMS so the team could update content without touching code.",
+          "tags": ["Astro", "CMS", "Performance"],
+          "roles": ["Frontend Development", "UI Design", "CMS Integration"],
+          "links": [
+            { "label": "View website", "url": "#" }
+          ],
+          "media": [
+            { "type": "image", "src": "https://picsum.photos/seed/lumen-1/1000/1250", "alt": "Studio Lumen main gallery" },
+            { "type": "image", "src": "https://picsum.photos/seed/lumen-2/1000/1250", "alt": "Single project view" },
+            { "type": "image", "src": "https://picsum.photos/seed/lumen-3/1000/1250", "alt": "Contact page" },
+            { "type": "image", "src": "https://picsum.photos/seed/lumen-4/1000/1250", "alt": "Mobile version of the gallery" }
+          ]
+        },
+        {
+          "id": "04",
+          "name": "Kioko App",
+          "category": "Mobile product",
+          "year": "2023",
+          "description": "Habit-tracking app with carefully tuned micro-interactions and its own component system. I worked with the product team to define the onboarding flow and designed the reward animations that play when a habit is completed.",
+          "tags": ["React Native", "UI Kit", "Prototype"],
+          "roles": ["Product Design", "Prototyping", "Component System"],
+          "links": [
+            { "label": "App Store", "url": "#" },
+            { "label": "Figma prototype", "url": "#" }
+          ],
+          "media": [
+            { "type": "image", "src": "https://picsum.photos/seed/kioko-1/1000/1250", "alt": "Kioko onboarding screen" },
+            { "type": "image", "src": "https://picsum.photos/seed/kioko-2/1000/1250", "alt": "Daily habits screen" },
+            { "type": "image", "src": "https://picsum.photos/seed/kioko-3/1000/1250", "alt": "Reward animation" }
+          ]
+        },
+        {
+          "id": "05",
+          "name": "Verbatim Coffee",
+          "category": "Branding + E-commerce",
+          "year": "2023",
+          "description": "Brand identity and online store for a specialty coffee shop with several locations. I designed the type system, packaging and a lightweight online store built for quick mobile ordering.",
+          "tags": ["Shopify", "Branding", "E-commerce"],
+          "roles": ["Art Direction", "Frontend Development", "Packaging Design"],
+          "links": [
+            { "label": "View store", "url": "#" },
+            { "label": "Brand book", "url": "#" }
+          ],
+          "media": [
+            { "type": "image", "src": "https://picsum.photos/seed/verbatim-1/1000/1250", "alt": "Verbatim Coffee brand identity" },
+            { "type": "image", "src": "https://picsum.photos/seed/verbatim-2/1000/1250", "alt": "Verbatim Coffee online store" },
+            { "type": "image", "src": "https://picsum.photos/seed/verbatim-3/1000/1250", "alt": "Product packaging" }
+          ]
+        },
+        {
+          "id": "06",
+          "name": "Solis Energy",
+          "category": "Product / Dashboard",
+          "year": "2023",
+          "description": "Monitoring dashboard for solar power installations, built for field technicians. I built real-time data visualisations and an offline mode that syncs logs once the connection comes back.",
+          "tags": ["Vue", "Data viz", "PWA"],
+          "roles": ["Frontend Development", "Data Visualisation", "PWA Architecture"],
+          "links": [
+            { "label": "View product", "url": "#" },
+            { "label": "Documentation", "url": "#" }
+          ],
+          "media": [
+            { "type": "image", "src": "https://picsum.photos/seed/solis-1/1000/1250", "alt": "Solis Energy main dashboard" },
+            { "type": "image", "src": "https://picsum.photos/seed/solis-2/1000/1250", "alt": "Installation detail view" },
+            { "type": "image", "src": "https://picsum.photos/seed/solis-3/1000/1250", "alt": "Offline mode on mobile" }
+          ]
+        },
+        {
+          "id": "07",
+          "name": "Marea Festival",
+          "category": "Event website",
+          "year": "2022",
+          "description": "Website for the Marea music festival, with an interactive line-up, ticket sales and a live mode for event day. The site handled over 200,000 visits during launch week without downtime.",
+          "tags": ["Next.js", "Animation", "Ticketing"],
+          "roles": ["Frontend Development", "Animation", "Performance Optimisation"],
+          "links": [
+            { "label": "View website", "url": "#" }
+          ],
+          "media": [
+            { "type": "image", "src": "https://picsum.photos/seed/marea-1/1000/1250", "alt": "Marea Festival homepage" },
+            { "type": "image", "src": "https://picsum.photos/seed/marea-2/1000/1250", "alt": "Interactive line-up" },
+            { "type": "image", "src": "https://picsum.photos/seed/marea-3/1000/1250", "alt": "Ticket sales page" },
+            { "type": "image", "src": "https://picsum.photos/seed/marea-4/1000/1250", "alt": "Mobile version of the site" }
+          ]
+        },
+        {
+          "id": "08",
+          "name": "Pulse Fitness",
+          "category": "Mobile app",
+          "year": "2022",
+          "description": "Personal training app with adaptive plans and progress tracking. I designed the progress chart system and built the shared animation library used across iOS and Android.",
+          "tags": ["Flutter", "UI Kit", "Animation"],
+          "roles": ["UI Design", "Frontend Development", "Animation System"],
+          "links": [
+            { "label": "App Store", "url": "#" },
+            { "label": "Google Play", "url": "#" }
+          ],
+          "media": [
+            { "type": "image", "src": "https://picsum.photos/seed/pulse-1/1000/1250", "alt": "Pulse Fitness home screen" },
+            { "type": "image", "src": "https://picsum.photos/seed/pulse-2/1000/1250", "alt": "Progress charts" },
+            { "type": "image", "src": "https://picsum.photos/seed/pulse-3/1000/1250", "alt": "Adaptive training plan" }
+          ]
+        }
+      ]
+    },
+    "skills": {
+      "eyebrow": "03 — skills",
+      "title": "What I do",
+      "subtitle": "From design to implementation, without losing detail along the way.",
+      "groups": [
+        {
+          "name": "Frontend",
+          "items": ["HTML5", "CSS / Sass", "JavaScript", "TypeScript", "React", "Next.js"]
+        },
+        {
+          "name": "Design",
+          "items": ["UI Design", "Prototyping", "Design systems", "Animation", "Accessibility"]
+        },
+        {
+          "name": "Backend",
+          "items": ["Node.js", "REST APIs", "Databases", "GraphQL"]
+        }
+      ]
+    },
+    "tools": {
+      "eyebrow": "04 — tools",
+      "title": "My toolbox",
+      "subtitle": "The software I work with every day.",
+      "items": [
+        { "name": "Figma", "role": "UI design" },
+        { "name": "VS Code", "role": "Code editor" },
+        { "name": "Git & GitHub", "role": "Version control" },
+        { "name": "Webflow", "role": "No-code" },
+        { "name": "Framer", "role": "Prototyping" },
+        { "name": "Notion", "role": "Organisation" }
+      ]
+    },
+    "about": {
+      "eyebrow": "05 — about me",
+      "title": "Hi, I'm Alex",
+      "paragraphs": [
+        "I'm a frontend developer with over five years of experience building digital products for studios, startups and independent brands.",
+        "I obsess over details: animation that feels right, spacing that breathes, and code that's easy to maintain. I work closely with designers to bring ideas to production without losing their essence."
+      ],
+      "stats": [
+        { "value": "5+", "label": "Years of experience" },
+        { "value": "32", "label": "Projects shipped" },
+        { "value": "12", "label": "Happy clients" }
+      ]
+    },
+    "contact": {
+      "eyebrow": "06 — contact",
+      "title": "Let's talk",
+      "description": "Got a project in mind? Send me a note and let's figure it out.",
+      "cta": "Say hello",
+      "email": "hola@alexrivera.dev",
+      "socials": [
+        { "name": "GitHub", "url": "#" },
+        { "name": "LinkedIn", "url": "#" },
+        { "name": "Instagram", "url": "#" },
+        { "name": "Dribbble", "url": "#" }
+      ],
+      "footer": "Designed and built by Alex Rivera.",
+      "back": "Back to top"
+    }
+  }
+}
