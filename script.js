@@ -6,8 +6,14 @@
    ========================================================= */
 
 const STORAGE_KEY = "portfolio-lang";
+const THEME_STORAGE_KEY = "portfolio-theme";
+const THEMES = [
+  { id: "default", label: "Default" },
+  { id: "mono", label: "Mono" },
+  { id: "frost", label: "Frost" },
+];
 let DATA = null;
-let currentLang = "es";
+let currentLang = "en";
 
 /* ---------- Init ---------- */
 document.addEventListener("DOMContentLoaded", () => {
@@ -25,12 +31,13 @@ async function init() {
     return;
   }
 
-  currentLang = localStorage.getItem(STORAGE_KEY) || detectLang();
-  if (!DATA[currentLang]) currentLang = "es";
+  currentLang = localStorage.getItem(STORAGE_KEY) || "en";
+  if (!DATA[currentLang]) currentLang = "en";
 
   render(currentLang);
   setupNav();
   setupLangSwitch();
+  setupThemeSwitch();
   setupScrollReveal();
   setupBackToTop();
   setupProjectModal();
@@ -58,11 +65,6 @@ function showLoadError() {
     </div>
   `;
   document.body.prepend(banner);
-}
-
-function detectLang() {
-  const browserLang = (navigator.language || "es").slice(0, 2).toLowerCase();
-  return browserLang === "en" ? "en" : "es";
 }
 
 /* ---------- Render ---------- */
@@ -323,16 +325,12 @@ function renderTools(tools) {
   const grid = document.getElementById("toolsGrid");
   grid.innerHTML = "";
 
-  tools.items.forEach((tool, index) => {
+  tools.items.forEach((tool) => {
     const card = document.createElement("div");
     card.className = "tool-card";
     card.innerHTML = `
-      <div class="tool-card__top">
-        <span class="tool-card__index">${String(index + 1).padStart(2, "0")}</span>
-        ${tool.icon ? `<span class="tool-card__icon"><img src="${tool.icon}" alt="" loading="lazy" /></span>` : ""}
-      </div>
+      ${tool.icon ? `<span class="tool-card__icon"><img src="${tool.icon}" alt="${tool.name}" loading="lazy" /></span>` : ""}
       <span class="tool-card__name">${tool.name}</span>
-      ${tool.role ? `<span class="tool-card__role">${tool.role}</span>` : ""}
     `;
     grid.appendChild(card);
   });
@@ -359,7 +357,9 @@ function renderAbout(about) {
 function renderContact(contact) {
   const email = document.getElementById("contactEmail");
   email.textContent = contact.email;
-  email.href = `mailto:${contact.email}`;
+  email.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(contact.email)}`;
+  email.target = "_blank";
+  email.rel = "noopener noreferrer";
 
   const socials = document.getElementById("contactSocials");
   socials.innerHTML = contact.socials
@@ -383,6 +383,34 @@ function setupLangSwitch() {
     localStorage.setItem(STORAGE_KEY, currentLang);
     render(currentLang);
   });
+}
+
+/* ---------- Theme switch ---------- */
+function setupThemeSwitch() {
+  const btn = document.getElementById("themeSwitch");
+  const label = document.getElementById("themeLabel");
+
+  const stored = localStorage.getItem(THEME_STORAGE_KEY);
+  const storedIndex = THEMES.findIndex((theme) => theme.id === stored);
+  let themeIndex = storedIndex >= 0 ? storedIndex : 0;
+
+  applyTheme(themeIndex, label);
+
+  btn.addEventListener("click", () => {
+    themeIndex = (themeIndex + 1) % THEMES.length;
+    applyTheme(themeIndex, label);
+    localStorage.setItem(THEME_STORAGE_KEY, THEMES[themeIndex].id);
+  });
+}
+
+function applyTheme(index, label) {
+  const theme = THEMES[index];
+  if (theme.id === "default") {
+    document.documentElement.removeAttribute("data-theme");
+  } else {
+    document.documentElement.setAttribute("data-theme", theme.id);
+  }
+  if (label) label.textContent = theme.label;
 }
 
 /* ---------- Nav ---------- */

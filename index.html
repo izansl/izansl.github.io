@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -46,11 +46,18 @@
         <span class="nav__index">06</span><span class="nav__label" data-i18n="nav.contact">Contacto</span>
       </a>
 
-      <button class="lang-switch" id="langSwitch" type="button">
-        <span class="lang-switch__current">ES</span>
-        <span class="lang-switch__sep">/</span>
-        <span class="lang-switch__other" id="langLabel">EN</span>
-      </button>
+      <div class="nav__switches">
+        <button class="lang-switch" id="langSwitch" type="button">
+          <span class="lang-switch__current">ES</span>
+          <span class="lang-switch__sep">/</span>
+          <span class="lang-switch__other" id="langLabel">EN</span>
+        </button>
+
+        <button class="theme-switch" id="themeSwitch" type="button" aria-label="Cambiar paleta de color">
+          <span class="theme-switch__dot" aria-hidden="true"></span>
+          <span class="theme-switch__label" id="themeLabel">Default</span>
+        </button>
+      </div>
     </nav>
   </header>
 
