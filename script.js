@@ -8,7 +8,7 @@
 const STORAGE_KEY = "portfolio-lang";
 const THEME_STORAGE_KEY = "portfolio-theme";
 const THEMES = [
-  { id: "default", label: "Default" },
+  { id: "default", label: "Red" },
   { id: "mono", label: "Mono" },
   { id: "frost", label: "Frost" },
 ];
